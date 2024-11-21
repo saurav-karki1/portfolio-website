@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 2px 15px 2px 15px;
+    padding: 8px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    padding-right: 20px;
+    padding-top: 15px;
+    color: white;
+    background-color: black;
+}
+
+nav ul li a:hover {
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+#conn {
+    background-color: white;
+    color: black;
+    padding: 5px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Hamburger menu styles */
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+
+#Welcome {
+    margin: 8px;
+    padding: 3px;
+}
+
+main {
+    display: flex;
+}
+
+.info {
+    background-color: #f2efef;
+    height: 100vh;
+    width: 50%;
+}
+
+.photo {
+    margin-top: 2px;
+    background-color: black;
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    height: 585px;
+    width: auto;
+
+}
+
+/* About section */
+.info {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    padding-bottom: 15px;
+
+}
+
+#Home {
+    margin-left: 100px;
+}
+
+#Saurav {
+    font-size: xx-large;
+    margin-top: 10px;
+    padding-top: 5px;
+}
+
+#animate {
+    padding-bottom: 15px;
+    overflow: hidden;
+    /* Ensures the text is hidden outside the element's boundaries */
+    white-space: nowrap;
+    /* Prevents the text from wrapping */
+    margin: 0 auto;
+    /* Centers the text */
+    animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Css for footer */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 15px;
+}
+
+.footer-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section ul li {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #fff;
+    margin-top: 20px;
+}
+/* hover in footer section when clicked in nav options*/
+.social-hover ul li a{
+    border: 2px solid white;
+    padding: 4px;
+     color: black;
+ }
+ .social-hover{
+     transition: background-color 0.3 ease, color 0.3s ease;
+ }
+
+.footer-hover ul li a {
+    border: 1.5px solid white;
+    color: black; /* Change this to your desired hover text color */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Responsive Styles for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    /* Navigation styles */
+    nav ul {
+        /* display: none;  */
+        flex-direction: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        width: 100%;
+        background-color: black;
+        padding: 0;
+    }
+    /* Main content layout adjustments */
+    main {
+        flex-direction: column;
+    }
+
+    .info,
+    .photo {
+        width: 100%;
+        height: auto;
+    }
+
+    .info {
+        padding: 20px 0 15 20;
+    }
+
+    .photo {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    img {
+        width: 90%;
+        height: auto;
+    }
+
+    /* Footer layout adjustments */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .footer-section h2 {
+        font-size: 1.3em;
+    }
+
+    .footer-section p,
+    .footer-section ul,
+    .footer-section ul li {
+        font-size: 1em;
+    }
+
+    .footer-section ul li a {
+        font-size: 1em;
+    }
+
+    .footer-bottom {
+        font-size: 0.9em;
+    }
+}
