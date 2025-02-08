@@ -1,0 +1,543 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 2px 15px 2px 15px;
+    padding: 8px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    padding-right: 20px;
+    padding-top: 15px;
+    color: white;
+    background-color:black;
+}
+
+nav ul li a:hover {
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+#conn {
+    background-color: white;
+    color: black;
+    padding: 5px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Hamburger menu styles */
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+
+#Welcome {
+    margin: 8px;
+    padding: 3px;
+}
+
+main {
+    display: flex;
+}
+
+.info {
+    background-color: #f2efef;
+    height: 100vh;
+    width: 50%;
+}
+
+.photo {
+    margin: 2px 0 2px 0;
+    background-color: #333;
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    height: 585px;
+    width: auto;
+}
+
+/* About section */
+.info {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    padding-bottom: 15px;
+
+}
+
+#Home {
+    margin-left: 100px;
+}
+
+#Saurav {
+    font-size: xx-large;
+    margin-top: 10px;
+    padding-top: 5px;
+}
+
+#animate {
+    padding-bottom: 15px;
+    overflow: hidden;
+    /* Ensures the text is hidden outside the element's boundaries */
+    white-space: nowrap;
+    /* Prevents the text from wrapping */
+    margin: 0 auto;
+    /* Centers the text */
+    animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Css for footer */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    background-color: black;
+    color: #fff;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 15px;
+}
+
+.footer-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section ul li {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #fff;
+    margin-top: 20px;
+}
+/* hover in footer section when clicked in nav options*/
+.social-hover ul li a{
+    border: 2px solid white;
+    padding: 4px;
+     color: black;
+ }
+ .social-hover{
+     transition: background-color 0.3 ease, color 0.3s ease;
+ }
+
+.footer-hover ul li a {
+    border: 1.5px solid white;
+    color: black; /* Change this to your desired hover text color */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Responsive Styles for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    /* Navigation styles */
+    nav ul {
+        /* display: none;  */
+        flex-direction: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        width: 100%;
+        background-color: black;
+        padding: 0;
+    }
+    /* Main content layout adjustments */
+    main {
+        flex-direction: column;
+    }
+
+    .info,
+    .photo {
+        width: 100%;
+        height: auto;
+    }
+
+    .info {
+        padding: 20px 0 15 20;
+    }
+
+    .photo {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    img {
+        width: 90%;
+        height: auto;
+    }
+
+    /* Footer layout adjustments */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .footer-section h2 {
+        font-size: 1.3em;
+    }
+
+    .footer-section p,
+    .footer-section ul,
+    .footer-section ul li {
+        font-size: 1em;
+    }
+
+    .footer-section ul li a {
+        font-size: 1em;
+    }
+
+    .footer-bottom {
+        font-size: 0.9em;
+    }
+}
+/*Now its the css for anout me page */
+/* About Page Styling */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px 10%;
+    background-color: #f5f5f5;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 900px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-content img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid black;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-text ul li {
+    font-size: 16px;
+    color: #444;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.about-text ul li::before {
+    content: "✔";
+    color: #007bff;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content img {
+        width: 150px;
+        height: 150px;
+    }
+}/* This is CSS for Project page */
+.projects-container {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    display: block;
+}
+
+.projects-container h1 {
+    padding: 10px;
+    margin: 10px;
+    font-size: 2rem; /* Adjust heading size */
+}
+
+/* Responsive Project Cards */
+.project {
+    background: #f4e1e1;
+    padding: 20px;
+    margin: 20px auto;
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project h2 {
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.project p {
+    font-size: 16px;
+    color: #666;
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.project a:hover {
+    background: #0056b3;
+}
+
+/* 📌 Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .projects-container {
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .projects-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .project {
+        width: 80%; /* Make the project boxes take up most of the screen */
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    .project h2 {
+        font-size: 1.3rem;
+    }
+
+    .project p {
+        font-size: 14px;
+    }
+
+    .project a {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+
+/*CSS for Contact page*/
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 1000px;
+    gap: 30px;
+}
+
+.contact-text {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-info {
+    flex: 1;
+    text-align: left;
+}
+
+form {
+    flex: 2;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    color: #0056b3;
+}
+
+/* 📌 Mobile Responsive Fix */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-text,
+    .contact-info {
+        text-align: center;
+        padding: 10px;
+    }
+
+    form {
+        width: 100%;
+        max-width: 100%;
+    }
+}
