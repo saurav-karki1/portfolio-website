@@ -17,37 +17,43 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-/* 2. Smooth Scrolling (For Navigation)
-document.querySelectorAll("nav a").forEach(anchor => {
-    anchor.addEventListener("click", function (event) {
-        event.preventDefault();
-        const targetId = this.getAttribute("href").substring(1);
-        const targetSection = document.getElementById(targetId);
-        
-        if (targetSection) {
-            window.scrollTo({
-                top: targetSection.offsetTop - 50,
-                behavior: "smooth"
-            });
-        }
-    });
-});*/
-//4. Show Confirmation After Form Submission
+
+//4. Show Confirmation After Form Submission and linked contact form with Spreadsheet.
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("form");
     const messageBox = document.createElement("p");
     messageBox.style.display = "none";
+    messageBox.style.color = "green";
     form.appendChild(messageBox);
 
     form.addEventListener("submit", function (event) {
         event.preventDefault();
-        
-        // Simulate form submission (You still need a backend for real submission)
-        setTimeout(() => {
-            messageBox.innerText = "Thank you! Your message has been sent.";
+
+        const formData = new FormData(form);
+        const object = {};
+        formData.forEach((value, key) => {
+            object[key] = value;
+        });
+
+        // Replace with your own SheetDB API endpoint
+        fetch("https://sheetdb.io/api/v1/7y4zpeaang9ja", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ data: object })
+        })
+        .then(response => response.json())
+        .then(data => {
+            messageBox.innerText = "✅ Thank you! Your message has been sent.";
             messageBox.style.display = "block";
             form.reset();
-        }, 500);
+        })
+        .catch(error => {
+            messageBox.innerText = "❌ Sorry! Something went wrong.";
+            messageBox.style.color = "red";
+            messageBox.style.display = "block";
+        });
     });
 });
 
