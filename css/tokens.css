@@ -1,0 +1,95 @@
+/* ═══════════════════════════════════════════════════════════════════
+   css/tokens.css — Design system tokens
+   All values live here; edit this file to retheme the entire site.
+═══════════════════════════════════════════════════════════════════ */
+
+:root {
+
+  /* ── Palette ──────────────────────────────────────────────────── */
+  --bg:          #080a10;
+  --bg-1:        #0c0f1a;
+  --bg-2:        #111826;
+  --surface:     rgba(255 255 255 / 0.04);
+  --surface-hi:  rgba(255 255 255 / 0.07);
+  --border:      rgba(255 255 255 / 0.08);
+  --border-hi:   rgba(255 255 255 / 0.14);
+
+  --cyan:        #4fd8ff;
+  --cyan-dim:    rgba(79 216 255 / 0.12);
+  --cyan-glow:   rgba(79 216 255 / 0.38);
+
+  --violet:      #9b7bff;
+  --violet-dim:  rgba(155 123 255 / 0.12);
+  --violet-glow: rgba(155 123 255 / 0.38);
+
+  --amber:       #ffb454;
+  --amber-dim:   rgba(255 180 84 / 0.12);
+  --amber-glow:  rgba(255 180 84 / 0.38);
+
+  --text-1:      #eef0ff;
+  --text-2:      rgba(238 240 255 / 0.65);
+  --text-3:      rgba(238 240 255 / 0.38);
+
+  /* ── Typography ───────────────────────────────────────────────── */
+  --ff-display:  'Space Grotesk', sans-serif;
+  --ff-body:     'Inter', sans-serif;
+  --ff-mono:     'JetBrains Mono', monospace;
+
+  --fs-xs:   0.75rem;    /* 12px */
+  --fs-sm:   0.875rem;   /* 14px */
+  --fs-base: 1rem;       /* 16px */
+  --fs-lg:   1.125rem;   /* 18px */
+  --fs-xl:   1.375rem;   /* 22px */
+  --fs-2xl:  1.75rem;    /* 28px */
+  --fs-3xl:  2.25rem;    /* 36px */
+  --fs-4xl:  clamp(2.25rem, 5vw, 3.5rem);
+  --fs-hero: clamp(3rem, 9vw, 6.5rem);
+
+  --fw-normal:   400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+
+  --lh-tight:   1.05;
+  --lh-snug:    1.2;
+  --lh-normal:  1.5;
+  --lh-relaxed: 1.75;
+
+  /* ── Spacing ──────────────────────────────────────────────────── */
+  --space-1:   0.25rem;
+  --space-2:   0.5rem;
+  --space-3:   0.75rem;
+  --space-4:   1rem;
+  --space-5:   1.25rem;
+  --space-6:   1.5rem;
+  --space-8:   2rem;
+  --space-10:  2.5rem;
+  --space-12:  3rem;
+  --space-16:  4rem;
+  --space-20:  5rem;
+  --space-24:  6rem;
+
+  --section-py:   clamp(5rem, 10vw, 8rem);
+  --container-px: clamp(1.25rem, 5vw, 2.5rem);
+  --container-w:  1200px;
+
+  /* ── Shape ────────────────────────────────────────────────────── */
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --radius-xl:   28px;
+  --radius-2xl:  40px;
+  --radius-full: 9999px;
+
+  /* ── Motion ───────────────────────────────────────────────────── */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-std:    cubic-bezier(0.4, 0, 0.2, 1);
+  --t-fast:  0.15s;
+  --t-med:   0.35s;
+  --t-slow:  0.65s;
+  --t-xl:    1s;
+
+  /* ── Layout ───────────────────────────────────────────────────── */
+  --nav-h: 72px;
+}

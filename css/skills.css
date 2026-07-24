@@ -1,0 +1,135 @@
+/* ═══════════════════════════════════════════════════════════════════
+   css/skills.css — Skills grid with 3D tilt cards
+═══════════════════════════════════════════════════════════════════ */
+
+#skills { overflow: hidden; }
+
+#skills::before {
+  content: '';
+  position: absolute;
+  width: 900px;
+  height: 900px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(79,216,255,0.025) 0%, transparent 55%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* ── Grid ─────────────────────────────────────────────────────── */
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  margin-top: var(--space-12);
+}
+
+/* ── Card ─────────────────────────────────────────────────────── */
+.skill-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition:
+    border-color var(--t-fast) var(--ease-std),
+    box-shadow var(--t-med) var(--ease-out),
+    background var(--t-fast) var(--ease-std);
+}
+
+.skill-card:hover {
+  border-color: rgba(79,216,255,0.32);
+  box-shadow:
+    0 0 48px rgba(79,216,255,0.08),
+    0 24px 64px rgba(0,0,0,0.32);
+}
+
+/* ── Shine overlay (follows mouse via JS) ─────────────────────── */
+.skill-card__shine {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255,255,255,0.07) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity var(--t-fast) var(--ease-std);
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.skill-card:hover .skill-card__shine { opacity: 1; }
+
+/* ── Card inner (lifted on 3D tilt) ──────────────────────────── */
+.skill-card__inner {
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Icon ─────────────────────────────────────────────────────── */
+.skill-card__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-5);
+  font-size: 1.5rem;
+}
+
+.skill-card__icon--cyan {
+  background: var(--cyan-dim);
+  box-shadow: 0 0 20px var(--cyan-dim);
+}
+
+.skill-card__icon--violet {
+  background: var(--violet-dim);
+  box-shadow: 0 0 20px var(--violet-dim);
+}
+
+.skill-card__icon--amber {
+  background: var(--amber-dim);
+  box-shadow: 0 0 20px var(--amber-dim);
+}
+
+/* ── Title ────────────────────────────────────────────────────── */
+.skill-card__title {
+  font-family: var(--ff-display);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+  color: var(--text-1);
+  margin-bottom: var(--space-2);
+  line-height: var(--lh-snug);
+}
+
+/* ── Description ──────────────────────────────────────────────── */
+.skill-card__desc {
+  font-size: var(--fs-sm);
+  color: var(--text-3);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-5);
+}
+
+/* ── Tag row ──────────────────────────────────────────────────── */
+.skill-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* ── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .skills__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 540px) {
+  .skills__grid { grid-template-columns: 1fr; }
+}
