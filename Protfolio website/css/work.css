@@ -1,0 +1,220 @@
+/* ═══════════════════════════════════════════════════════════════════
+   css/work.css — Work / Projects section
+═══════════════════════════════════════════════════════════════════ */
+
+#work {
+  background: var(--bg-1);
+  overflow: hidden;
+}
+
+#work::after {
+  content: '';
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  bottom: -200px;
+  right: -200px;
+  background: radial-gradient(circle, rgba(155,123,255,0.05) 0%, transparent 65%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* ── Section header ───────────────────────────────────────────── */
+.work__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  margin-bottom: var(--space-12);
+}
+
+.work__note {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  color: var(--text-3);
+  letter-spacing: 0.06em;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  padding: var(--space-2) var(--space-5);
+  white-space: nowrap;
+}
+
+/* ── Grid ─────────────────────────────────────────────────────── */
+.work__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+/* ── Card ─────────────────────────────────────────────────────── */
+.work-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition:
+    border-color var(--t-fast) var(--ease-std),
+    box-shadow var(--t-med) var(--ease-out),
+    transform var(--t-med) var(--ease-out);
+}
+
+/* Gradient border on hover (pseudo border-image trick) */
+.work-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--cyan), var(--violet));
+  z-index: -1;
+  opacity: 0;
+  transition: opacity var(--t-med) var(--ease-std);
+}
+
+.work-card:hover::before { opacity: 1; }
+
+.work-card:hover {
+  box-shadow:
+    0 0 64px rgba(79,216,255,0.1),
+    0 32px 80px rgba(0,0,0,0.45);
+  transform: translateY(-8px);
+  border-color: transparent;
+}
+
+/* Shine */
+.work-card__shine {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255,255,255,0.06) 0%,
+    transparent 55%
+  );
+  opacity: 0;
+  transition: opacity var(--t-fast) var(--ease-std);
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.work-card:hover .work-card__shine { opacity: 1; }
+
+/* ── Card number ──────────────────────────────────────────────── */
+.work-card__num {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  color: var(--text-3);
+  letter-spacing: 0.18em;
+  margin-bottom: var(--space-5);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.work-card__num::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── Thumbnail placeholder ────────────────────────────────────── */
+.work-card__thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--bg-2);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.work-card__thumb::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--cyan-dim) 0%, var(--violet-dim) 100%);
+  opacity: 0.6;
+}
+
+.work-card__thumb-label {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  color: var(--text-3);
+  letter-spacing: 0.1em;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Title ────────────────────────────────────────────────────── */
+.work-card__title {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--space-3);
+  line-height: var(--lh-snug);
+}
+
+/* ── Description ──────────────────────────────────────────────── */
+.work-card__desc {
+  font-size: var(--fs-sm);
+  color: var(--text-3);
+  line-height: var(--lh-relaxed);
+  flex: 1;
+  margin-bottom: var(--space-5);
+}
+
+/* ── Tags ─────────────────────────────────────────────────────── */
+.work-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+/* ── Link ─────────────────────────────────────────────────────── */
+.work-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  text-decoration: none;
+  margin-top: auto;
+  transition: gap var(--t-fast) var(--ease-out), color var(--t-fast) var(--ease-std);
+}
+
+.work-card__link:hover { gap: var(--space-4); }
+
+.work-card__link svg {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--t-fast) var(--ease-out);
+  flex-shrink: 0;
+}
+
+.work-card__link:hover svg { transform: translate(3px, -3px); }
+
+/* ── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .work__grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .work__grid   { grid-template-columns: 1fr; }
+  .work__header { flex-direction: column; align-items: flex-start; }
+  .work-card:hover { transform: none; }
+}

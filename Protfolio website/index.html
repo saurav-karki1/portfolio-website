@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ── Charset & Viewport ──────────────────────────────────── -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ── Primary SEO ─────────────────────────────────────────── -->
+  <title>Saurav Karki | Portfolio - Tech Enthusiast</title>
+  <meta name="description" content="Welcome to Saurav Karki's portfolio. A passionate web developer and tech enthusiast building innovative digital solutions. Explore my portfolio and projects">
+  <meta name="keywords" content="Saurav Karki, web developer, Saurav Karki portfolio, tech enthusiast, TechGuruNepal, Saurav, Birtamode ">
+  <meta name="author" content="Saurav Karki">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.sauravkarki1.com.np/">
+
+  <!-- ── Google Site Verification ────────────────────────────── -->
+  <meta name="google-site-verification" content="klv21L6axeM7WZXI4DTWV7LVdDXWJ6iNvZCKyRE_JdU">
+
+  <!-- ── Open Graph ──────────────────────────────────────────── -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://www.sauravkarki1.com.np/">
+  <meta property="og:title"       content="Saurav Karki | Web Developer &amp; Tech Enthusiast">
+  <meta property="og:description" content="Web developer and tech enthusiast based in Nepal. I build fast, clean websites and keep pace with how the web actually evolves.">
+  <meta property="og:image"       content="https://www.sauravkarki1.com.np/images/photo.jpeg">
+  <meta property="og:image:alt"   content="Saurav Karki — web developer based in Nepal">
+  <meta property="og:locale"      content="en_US">
+  <meta property="og:site_name"   content="Saurav Karki Portfolio">
+
+  <!-- ── Twitter Card ────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:site"        content="@sauravkarki59">
+  <meta name="twitter:creator"     content="@sauravkarki59">
+  <meta name="twitter:title"       content="Saurav Karki | Web Developer &amp; Tech Enthusiast">
+  <meta name="twitter:description" content="Web developer and tech enthusiast based in Nepal. Building fast, clean websites and staying current with the web.">
+  <meta name="twitter:image"       content="https://www.sauravkarki1.com.np/images/photo.jpeg">
+
+  <!-- ── JSON-LD: Person schema ──────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Saurav Karki",
+    "jobTitle": "Web Developer",
+    "description": "Web developer and tech enthusiast based in Nepal, building fast and clean websites.",
+    "url": "https://www.sauravkarki1.com.np/",
+    "image": "https://www.sauravkarki1.com.np/images/photo.jpeg",
+    "email": "sauravkarki59@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Birtamode",
+      "addressCountry": "NP"
+    },
+    "sameAs": [
+      "https://www.facebook.com/saurav.karki.5458498",
+      "https://x.com/sauravkarki59",
+      "https://www.instagram.com/saurav__59/",
+      "https://www.linkedin.com/in/saurav-karki-7b264531b/"
+    ]
+  }
+  </script>
+
+  <!-- ── Preconnect for fonts ─────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- ── Web fonts (display=swap prevents FOIT) ──────────────── -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- ── Stylesheets ─────────────────────────────────────────── -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/skills.css">
+  <link rel="stylesheet" href="css/work.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+
+</head>
+
+<body>
+
+<!-- ══════════════════════════════════════════════════════════════
+     NAV
+══════════════════════════════════════════════════════════════════ -->
+<header role="banner">
+  <nav id="site-nav" class="nav" aria-label="Main navigation">
+    <div class="nav__inner">
+
+      <!-- Logo mark -->
+      <a href="#hero" class="nav__logo" aria-label="Saurav Karki — return to top">
+        <svg class="nav__logo-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width: 28px; height: 28px; display: block;">
+          <path d="M6 10L12 16L6 22" stroke="url(#logo-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M26 10L20 16L26 22" stroke="url(#logo-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M18 6L14 26" stroke="url(#logo-grad)" stroke-width="2.5" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="logo-grad" x1="6" y1="6" x2="26" y2="26" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#4fd8ff"/>
+              <stop offset="1" stop-color="#9b7bff"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav__links" role="list">
+        <li><a href="#about"   class="nav__link" aria-current="false">About</a></li>
+        <li><a href="#skills"  class="nav__link" aria-current="false">Skills</a></li>
+        <li><a href="#work"    class="nav__link" aria-current="false">Work</a></li>
+      </ul>
+
+      <!-- Contact CTA (desktop) -->
+      <a href="#contact" class="nav__cta" id="nav-contact-cta">Contact</a>
+
+      <!-- Hamburger (mobile) -->
+      <button
+        id="nav-hamburger"
+        class="nav__hamburger"
+        aria-expanded="false"
+        aria-controls="nav-mobile"
+        aria-label="Open navigation menu"
+        type="button"
+      >
+        <span class="nav__hamburger-bar" aria-hidden="true"></span>
+        <span class="nav__hamburger-bar" aria-hidden="true"></span>
+        <span class="nav__hamburger-bar" aria-hidden="true"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile full-screen overlay -->
+  <div
+    id="nav-mobile"
+    class="nav__mobile"
+    role="dialog"
+    aria-label="Navigation menu"
+    aria-modal="true"
+  >
+    <ul class="nav__mobile-links" role="list">
+      <li><a href="#hero"    class="nav__mobile-link">Home</a></li>
+      <li><a href="#about"   class="nav__mobile-link">About</a></li>
+      <li><a href="#skills"  class="nav__mobile-link">Skills</a></li>
+      <li><a href="#work"    class="nav__mobile-link">Work</a></li>
+    </ul>
+    <a href="#contact" class="nav__mobile-cta">Get in Touch</a>
+  </div>
+</header>
+
+<main id="main-content">
+
+<!-- ══════════════════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════════════════════ -->
+<section id="hero" aria-labelledby="hero-title">
+
+  <!-- 3D canvas — purely decorative, not conveying content -->
+  <canvas id="hero-canvas" aria-hidden="true" role="presentation"></canvas>
+
+  <!-- Ambient background glow layers -->
+  <div class="hero-bg-glow"     aria-hidden="true"></div>
+  <div class="hero-grid"        aria-hidden="true"></div>
+
+  <!-- Floating parallax shapes (decorative) -->
+  <div class="hero__parallax-layer" aria-hidden="true">
+    <div class="hero__parallax-shape" data-parallax="0.35"></div>
+    <div class="hero__parallax-shape" data-parallax="0.55"></div>
+    <div class="hero__parallax-shape" data-parallax="0.25"></div>
+    <div class="hero__parallax-shape" data-parallax="0.45"></div>
+  </div>
+
+  <div class="hero__inner">
+
+    <!-- ── Semantic text content (crawlable) ────────────────── -->
+    <div class="hero__content">
+
+      <div class="hero__eyebrow" aria-label="Status: Available for web development work">
+        <span class="hero__eyebrow-dot" aria-hidden="true"></span>
+        Available for web dev work
+      </div>
+
+      <h1 id="hero-title" class="hero__title">
+        Saurav<br>
+        <span class="gradient-text">Karki</span>
+      </h1>
+
+      <p class="hero__sub">
+        Web developer &amp; tech enthusiast<br>
+        based in Nepal.
+      </p>
+
+      <p class="hero__desc">
+        I build fast, clean websites — from structure and styling
+        to deployment — and keep up with how the web actually evolves.
+      </p>
+
+      <div class="hero__cta">
+        <a href="#work"    class="btn btn-primary" id="hero-cta-work">View Work</a>
+        <a href="#contact" class="btn btn-ghost"   id="hero-cta-contact">Get in Touch</a>
+      </div>
+    </div>
+
+    <!-- ── Hero photo ────────────────────────────────────────── -->
+    <div class="hero__photo-wrapper">
+      <img
+        src="images/photo.jpeg"
+        alt="Saurav Karki — web developer and tech enthusiast based in Nepal"
+        class="hero__photo"
+        width="360"
+        height="360"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+      >
+
+      <!-- Floating skill badge -->
+      <div class="hero__badge" aria-hidden="true">
+        <span class="hero__badge-icon">⚡</span>
+        <span class="hero__badge-text">
+          Exploring <span>AI&nbsp;tools</span> &amp; new workflows
+        </span>
+      </div>
+    </div>
+
+  </div><!-- /.hero__inner -->
+
+  <!-- Scroll indicator -->
+  <div class="hero__scroll" aria-hidden="true">
+    <span class="hero__scroll-text">scroll</span>
+    <span class="hero__scroll-line"></span>
+  </div>
+
+</section><!-- /#hero -->
+
+<div class="section-divider" aria-hidden="true"></div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     ABOUT
+══════════════════════════════════════════════════════════════════ -->
+<section id="about" class="section" aria-labelledby="about-title">
+  <div class="container">
+    <div class="about__inner">
+
+      <!-- Text -->
+      <div class="about__text">
+        <p class="section-label" data-reveal>About</p>
+
+        <h2 id="about-title" class="section-title" data-reveal data-reveal-delay="1">
+          Building things<br>
+          <span class="gradient-text">that actually work.</span>
+        </h2>
+
+        <p data-reveal data-reveal-delay="2">
+          The site you're replacing was built two years ago — flat, unstyled, and clearly
+          a starting point. Since then, I've kept moving: shipping projects, picking up new tools,
+          and getting comfortable with parts of the stack that I only scratched the surface of before.
+        </p>
+
+        <p data-reveal data-reveal-delay="3">
+          Web development is where I spend most of my time — writing HTML, CSS, and JavaScript,
+          working with WordPress, and handling SEO for sites that need to rank. More recently
+          I've been exploring AI workflows and figuring out where they genuinely speed things up.
+        </p>
+
+        <p data-reveal data-reveal-delay="4">
+          I'm based in Nepal, available for web dev work and open to collaboration
+          on projects worth building.
+        </p>
+      </div>
+
+      <!-- Stats -->
+      <div class="about__stats" data-reveal data-reveal-delay="2">
+
+        <div class="about__stat-card">
+          <div class="about__stat-number">
+            <span data-count="3" data-count-suffix="+">3+</span>
+          </div>
+          <div class="about__stat-label">Years writing code</div>
+          <div class="about__stat-desc">HTML, CSS, JS, WordPress &amp; beyond</div>
+        </div>
+
+        <div class="about__stat-card">
+          <div class="about__stat-number">🇳🇵</div>
+          <div class="about__stat-label">Based in Nepal</div>
+          <div class="about__stat-desc">Birtamode — available for remote work worldwide</div>
+        </div>
+
+        <div class="about__stat-card">
+          <div class="about__stat-number">
+            <span data-count="4" data-count-suffix=" areas">4 areas</span>
+          </div>
+          <div class="about__stat-label">Primary focus areas</div>
+          <div class="about__stat-desc">Web dev · UI design · SEO · AI tools</div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section><!-- /#about -->
+
+<div class="section-divider" aria-hidden="true"></div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     SKILLS
+══════════════════════════════════════════════════════════════════ -->
+<section id="skills" class="section" aria-labelledby="skills-title">
+  <div class="container">
+
+    <p class="section-label" data-reveal>Skills</p>
+    <h2 id="skills-title" class="section-title" data-reveal data-reveal-delay="1">
+      What I work with
+    </h2>
+    <p class="section-desc" data-reveal data-reveal-delay="2">
+      Six areas I've put consistent time into — both the craft of building
+      and the business side of getting it right.
+    </p>
+
+    <div class="skills__grid">
+
+      <!-- Web Development -->
+      <article class="skill-card" data-reveal data-reveal-delay="1">
+        <div class="skill-card__shine" aria-hidden="true"></div>
+        <div class="skill-card__inner">
+          <div class="skill-card__icon skill-card__icon--cyan" aria-hidden="true">🌐</div>
+          <h3 class="skill-card__title">Web Development</h3>
+          <p class="skill-card__desc">
+            Semantic HTML, CSS from scratch to complex layouts, and interactive JavaScript.
+            Front end built properly, not assembled from templates.
+          </p>
+          <div class="skill-card__tags">
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">JavaScript</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- UI Design -->
+      <article class="skill-card" data-reveal data-reveal-delay="2">
+        <div class="skill-card__shine" aria-hidden="true"></div>
+        <div class="skill-card__inner">
+          <div class="skill-card__icon skill-card__icon--violet" aria-hidden="true">🎨</div>
+          <h3 class="skill-card__title">UI Design</h3>
+          <p class="skill-card__desc">
+            Translating ideas into interfaces that feel deliberate — layout, hierarchy,
+            colour, and the micro-details that separate good from mediocre.
+          </p>
+          <div class="skill-card__tags">
+            <span class="skill-tag skill-tag--violet">Figma</span>
+            <span class="skill-tag skill-tag--violet">Prototyping</span>
+            <span class="skill-tag skill-tag--violet">Design Systems</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- WordPress & SEO -->
+      <article class="skill-card" data-reveal data-reveal-delay="3">
+        <div class="skill-card__shine" aria-hidden="true"></div>
+        <div class="skill-card__inner">
+          <div class="skill-card__icon skill-card__icon--cyan" aria-hidden="true">📈</div>
+          <h3 class="skill-card__title">WordPress &amp; SEO</h3>
+          <p class="skill-card__desc">
+            Building and managing WordPress sites, paired with on-page SEO — structured
+            data, technical audits, and search-ready markup that actually ranks.
+          </p>
+          <div class="skill-card__tags">
+            <span class="skill-tag">WordPress</span>
+            <span class="skill-tag">On-page SEO</span>
+            <span class="skill-tag">Schema</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Programming -->
+      <article class="skill-card" data-reveal data-reveal-delay="1">
+        <div class="skill-card__shine" aria-hidden="true"></div>
+        <div class="skill-card__inner">
+          <div class="skill-card__icon skill-card__icon--violet" aria-hidden="true">💻</div>
+          <h3 class="skill-card__title">Programming Fundamentals</h3>
+          <p class="skill-card__desc">
+            Problem-solving, logic, and the foundations that make everything else easier —
+            algorithms, data structures, and clean code habits.
+          </p>
+          <div class="skill-card__tags">
+            <span class="skill-tag skill-tag--violet">Python</span>
+            <span class="skill-tag skill-tag--violet">C/C++</span>
+            <span class="skill-tag skill-tag--violet">Algorithms</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tech Writing -->
+      <article class="skill-card" data-reveal data-reveal-delay="2">
+        <div class="skill-card__shine" aria-hidden="true"></div>
+        <div class="skill-card__inner">
+          <div class="skill-card__icon skill-card__icon--amber" aria-hidden="true">✍️</div>
+          <h3 class="skill-card__title">Tech Writing</h3>
+          <p class="skill-card__desc">
+            Explaining technical topics in plain language — tutorials, blog posts,
+            and documentation for people who don't want to wade through jargon.
+          </p>
+          <div class="skill-card__tags">
+            <span class="skill-tag skill-tag--amber">Blogging</span>
+            <span class="skill-tag skill-tag--amber">Documentation</span>
+            <span class="skill-tag skill-tag--amber">Tutorials</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Always Learning -->
+      <article class="skill-card" data-reveal data-reveal-delay="3">
+        <div class="skill-card__shine" aria-hidden="true"></div>
+        <div class="skill-card__inner">
+          <div class="skill-card__icon skill-card__icon--cyan" aria-hidden="true">🤖</div>
+          <h3 class="skill-card__title">Always Learning</h3>
+          <p class="skill-card__desc">
+            Actively exploring AI tools, new development workflows, and anything that changes
+            how websites get built — staying current, not just curious.
+          </p>
+          <div class="skill-card__tags">
+            <span class="skill-tag">AI Tools</span>
+            <span class="skill-tag">New Workflows</span>
+            <span class="skill-tag">R&amp;D</span>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /.skills__grid -->
+
+  </div>
+</section><!-- /#skills -->
+
+<div class="section-divider" aria-hidden="true"></div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     WORK
+══════════════════════════════════════════════════════════════════ -->
+<section id="work" class="section" aria-labelledby="work-title">
+  <div class="container">
+
+    <div class="work__header">
+      <div>
+        <p class="section-label" data-reveal>Work</p>
+        <h2 id="work-title" class="section-title" data-reveal data-reveal-delay="1">
+          Selected projects
+        </h2>
+      </div>
+      <span class="work__note" data-reveal>Real projects coming soon — check back</span>
+    </div>
+
+    <div class="work__grid">
+
+      <!-- Project 1 -->
+      <article class="work-card" data-reveal data-reveal-delay="1">
+        <div class="work-card__shine" aria-hidden="true"></div>
+        <div class="work-card__num" aria-hidden="true">001</div>
+        <div class="work-card__thumb" aria-label="Project preview coming soon">
+          <span class="work-card__thumb-label">Preview coming soon</span>
+        </div>
+        <h3 class="work-card__title">Project title goes here</h3>
+        <p class="work-card__desc">
+          Short description of the work — what problem it solved, what made it interesting
+          to build. Replace this with your real project copy when ready.
+        </p>
+        <div class="work-card__tags">
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">JavaScript</span>
+        </div>
+        <a href="#work" class="work-card__link" aria-label="View project details for project 1">
+          View project
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+            <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="work-card" data-reveal data-reveal-delay="2">
+        <div class="work-card__shine" aria-hidden="true"></div>
+        <div class="work-card__num" aria-hidden="true">002</div>
+        <div class="work-card__thumb" aria-label="Project preview coming soon">
+          <span class="work-card__thumb-label">Preview coming soon</span>
+        </div>
+        <h3 class="work-card__title">Project title goes here</h3>
+        <p class="work-card__desc">
+          Short description of the work — what problem it solved, what made it interesting
+          to build. Replace this with your real project copy when ready.
+        </p>
+        <div class="work-card__tags">
+          <span class="skill-tag skill-tag--violet">WordPress</span>
+          <span class="skill-tag skill-tag--violet">SEO</span>
+          <span class="skill-tag skill-tag--violet">Performance</span>
+        </div>
+        <a href="#work" class="work-card__link" aria-label="View project details for project 2">
+          View project
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+            <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="work-card" data-reveal data-reveal-delay="3">
+        <div class="work-card__shine" aria-hidden="true"></div>
+        <div class="work-card__num" aria-hidden="true">003</div>
+        <div class="work-card__thumb" aria-label="Project preview coming soon">
+          <span class="work-card__thumb-label">Preview coming soon</span>
+        </div>
+        <h3 class="work-card__title">Project title goes here</h3>
+        <p class="work-card__desc">
+          Short description of the work — what problem it solved, what made it interesting
+          to build. Replace this with your real project copy when ready.
+        </p>
+        <div class="work-card__tags">
+          <span class="skill-tag skill-tag--amber">UI Design</span>
+          <span class="skill-tag skill-tag--amber">Figma</span>
+          <span class="skill-tag skill-tag--amber">Prototype</span>
+        </div>
+        <a href="#work" class="work-card__link" aria-label="View project details for project 3">
+          View project
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+            <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </article>
+
+    </div><!-- /.work__grid -->
+
+  </div>
+</section><!-- /#work -->
+
+<div class="section-divider" aria-hidden="true"></div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     CONTACT
+══════════════════════════════════════════════════════════════════ -->
+<section id="contact" class="section" aria-labelledby="contact-title">
+  <div class="container">
+    <div class="contact__panel" data-reveal>
+      <div class="contact__glass">
+
+        <!-- Left Column: Contact Details -->
+        <div class="contact__info-col">
+          <p class="contact__label">Get in touch</p>
+
+          <h2 id="contact-title" class="contact__title">
+            Let's build something<br>
+            <span class="gradient-text">worth building.</span>
+          </h2>
+
+          <p class="contact__desc">
+            If you need a website built, have a project you want help on,
+            or just want to talk shop — my inbox is open. Fill out the form or reach out directly.
+          </p>
+
+          <div class="contact__direct">
+            <a
+              href="mailto:sauravkarki59@gmail.com"
+              class="contact__email-btn"
+              id="contact-email-btn"
+              aria-label="Send email to sauravkarki59@gmail.com"
+            >
+              <!-- Mail icon -->
+              <svg viewBox="0 0 18 14" fill="none" aria-hidden="true" focusable="false">
+                <rect x="1" y="1" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M1 3l8 5 8-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              sauravkarki59@gmail.com
+            </a>
+
+            <p class="contact__phone">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:16px; height:16px; vertical-align:middle; margin-right:4px;">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <a href="tel:+9779843467485">+977-9843467485</a>
+            </p>
+          </div>
+
+          <div class="contact__divider" aria-hidden="true">
+            <span class="contact__divider-text">or find me on</span>
+          </div>
+
+          <nav class="contact__socials" aria-label="Saurav Karki's social media profiles">
+
+            <!-- Facebook -->
+            <a
+              href="https://www.facebook.com/saurav.karki.5458498"
+              class="social-btn"
+              id="contact-facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Saurav Karki on Facebook (opens in new tab)"
+            >
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false" width="16" height="16">
+                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm1.54 5.53H8.6c-.3 0-.6.14-.6.55V7.1h1.94l-.26 2.08H8V14H5.96V9.18H4.9V7.1h1.06V5.95c0-1.65 1.05-2.52 2.52-2.52.65 0 1.5.1 1.5.1v1.95l-.44.05z"/>
+              </svg>
+              Facebook
+            </a>
+
+            <!-- Twitter / X -->
+            <a
+              href="https://x.com/sauravkarki59"
+              class="social-btn"
+              id="contact-twitter"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Saurav Karki on X / Twitter (opens in new tab)"
+            >
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false" width="16" height="16">
+                <path d="M12.6 2h2.4L9.72 7.3 16 14h-4.5l-3.3-4.34L4.44 14H2l5.56-6.37L0 2h4.58l3.02 3.99L12.6 2zm-.9 10.77h1.32L4.44 3.24H3.04l8.66 11.53z"/>
+              </svg>
+              Twitter/X
+            </a>
+
+            <!-- Instagram -->
+            <a
+              href="https://www.instagram.com/saurav__59/"
+              class="social-btn"
+              id="contact-instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Saurav Karki on Instagram (opens in new tab)"
+            >
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false" width="16" height="16">
+                <path d="M8 0C5.83 0 5.56.01 4.7.05 3.85.09 3.27.22 2.76.42A4.2 4.2 0 0 0 1.2 1.2 4.2 4.2 0 0 0 .42 2.76C.22 3.27.09 3.85.05 4.7.01 5.56 0 5.83 0 8s.01 2.44.05 3.3c.04.85.17 1.43.37 1.94a4.2 4.2 0 0 0 .78 1.56 4.2 4.2 0 0 0 1.56.78c.51.2 1.09.33 1.94.37.86.04 1.13.05 3.3.05s2.44-.01 3.3-.05c.85-.04 1.43-.17 1.94-.37a4.2 4.2 0 0 0 1.56-.78 4.2 4.2 0 0 0 .78-1.56c.2-.51.33-1.09.37-1.94.04-.86.05-1.13.05-3.3s-.01-2.44-.05-3.3c-.04-.85-.17-1.43-.37-1.94A4.2 4.2 0 0 0 14.8 1.2 4.2 4.2 0 0 0 13.24.42C12.73.22 12.15.09 11.3.05 10.44.01 10.17 0 8 0zm0 1.44c2.14 0 2.4.01 3.24.05.78.04 1.2.17 1.48.28.37.15.64.32.92.6.28.28.45.55.6.92.11.28.24.7.28 1.48.04.84.05 1.1.05 3.23s-.01 2.4-.05 3.24c-.04.78-.17 1.2-.28 1.48a2.47 2.47 0 0 1-.6.92 2.47 2.47 0 0 1-.92.6c-.28.11-.7.24-1.48.28-.84.04-1.1.05-3.24.05s-2.4-.01-3.24-.05c-.78-.04-1.2-.17-1.48-.28a2.47 2.47 0 0 1-.92-.6 2.47 2.47 0 0 1-.6-.92c-.11-.28-.24-.7-.28-1.48C1.45 10.4 1.44 10.13 1.44 8s.01-2.4.05-3.24c.04-.78.17-1.2.28-1.48.15-.37.32-.64.6-.92.28-.28.55-.45.92-.6.28-.11.7-.24 1.48-.28.84-.04 1.1-.05 3.24-.05zM8 3.89A4.11 4.11 0 1 0 8 12.11 4.11 4.11 0 0 0 8 3.89zm0 1.44a2.67 2.67 0 1 1 0 5.34 2.67 2.67 0 0 1 0-5.34zm4.27-.18a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92z"/>
+              </svg>
+              Instagram
+            </a>
+
+            <!-- LinkedIn -->
+            <a
+              href="https://www.linkedin.com/in/saurav-karki-7b264531b/"
+              class="social-btn"
+              id="contact-linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Saurav Karki on LinkedIn (opens in new tab)"
+            >
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false" width="16" height="16">
+                <path d="M0 1.15C0 .52.52 0 1.16 0h13.68C15.48 0 16 .52 16 1.15v13.7c0 .63-.52 1.15-1.16 1.15H1.16C.52 16 0 15.48 0 14.85V1.15zM4.8 13.5V6.17H2.5V13.5H4.8zM3.65 5.2a1.34 1.34 0 1 0 0-2.68 1.34 1.34 0 0 0 0 2.68zm4.24 8.3V9.53c0-.21.01-.41.07-.56.16-.4.53-.82 1.14-.82.8 0 1.12.61 1.12 1.5V13.5h2.3V9.43c0-2.1-1.12-3.08-2.62-3.08-1.23 0-1.76.69-2.07 1.15h.02V6.17H5.56c.03.68 0 7.33 0 7.33H7.9z"/>
+              </svg>
+              LinkedIn
+            </a>
+
+          </nav><!-- /.contact__socials -->
+        </div>
+
+        <!-- Right Column: Interactive Form -->
+        <div class="contact__form-col">
+          <form id="contactForm" class="contact__form" autocomplete="on">
+            <div class="form__group">
+              <label for="name" class="form__label">Name</label>
+              <input type="text" id="name" name="name" class="form__input" placeholder="Your Name" required>
+            </div>
+
+            <div class="form__group">
+              <label for="email" class="form__label">Email</label>
+              <input type="email" id="email" name="email" class="form__input" placeholder="your@email.com" required>
+            </div>
+
+            <div class="form__group">
+              <label for="message" class="form__label">Message</label>
+              <textarea id="message" name="message" class="form__input" placeholder="How can I help you?" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary form__submit-btn">Send Message</button>
+            <div id="form-message" class="form__message" aria-live="polite"></div>
+          </form>
+        </div>
+
+      </div><!-- /.contact__glass -->
+    </div><!-- /.contact__panel -->
+  </div>
+</section><!-- /#contact -->
+
+</main><!-- /#main-content -->
+
+<!-- ══════════════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__inner">
+
+      <p class="footer__copy">
+        &copy; <span id="footer-year">2026</span>
+        <a href="https://www.sauravkarki1.com.np/">Saurav Karki</a>.
+        All rights reserved.
+      </p>
+
+      <a href="#hero" class="footer__back" aria-label="Back to top of page">
+        Back to top
+        <svg viewBox="0 0 14 14" fill="none" aria-hidden="true" focusable="false">
+          <path d="M7 11V3M3 7l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════════════════════════
+     SCRIPTS
+══════════════════════════════════════════════════════════════════ -->
+
+<!-- Core scripts (defer = non-blocking, run after HTML parse) -->
+<script src="js/nav.js"         defer></script>
+<script src="js/scroll-anim.js" defer></script>
+<script src="js/tilt.js"        defer></script>
+<script src="js/parallax.js"    defer></script>
+<script src="js/contact.js"     defer></script>
+
+<!-- Three.js (CORS-safe local copy) -->
+<script src="js/three.min.js"></script>
+<!-- Hero 3D background -->
+<script src="js/hero3d.js" defer></script>
+
+<!-- Inline utilities -->
+<script>
+  // Dynamic copyright year
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
