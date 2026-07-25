@@ -40,21 +40,21 @@
     // ── Main 3D Group ────────────────────────────────────────────────
     const group = new THREE.Group();
 
-    // Position: right-side on desktop (behind photo area), centered on mobile
-    const getBasePos = (w) => new THREE.Vector3(w < 768 ? 0 : 3.2, w < 768 ? 0.5 : 0.0, -1);
+    // Position: right-side on desktop, behind middle photo area on mobile
+    const getBasePos = (w) => new THREE.Vector3(w < 768 ? 0 : 3.2, w < 768 ? -0.3 : 0.0, w < 768 ? -2.5 : -1.0);
     let basePos = getBasePos(window.innerWidth);
     group.position.copy(basePos);
     scene.add(group);
 
     const detail = isLowEnd ? 0 : 1;
 
-    // ── ICOSAHEDRON wireframe (bright, high opacity) ─────────────────
+    // ── ICOSAHEDRON wireframe (ambient on mobile, vibrant on desktop) ─
     const icoGeo = new THREE.IcosahedronGeometry(1.8, detail);
     group.add(new THREE.Mesh(icoGeo, new THREE.MeshBasicMaterial({
       color: 0x4fd8ff,
       wireframe: true,
       transparent: true,
-      opacity: 0.55,         // clearly visible
+      opacity: isMobile ? 0.22 : 0.55,
     })));
 
     // Solid inner fill (very subtle)
