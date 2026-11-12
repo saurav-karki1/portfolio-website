@@ -197,7 +197,8 @@ function init3DInteractive() {
 
       const tiltX = (0.5 - y) * 12;
       const tiltY = (x - 0.5) * 14;
-      phone.style.transform = `perspective(1000px) rotateY(${tiltY.toFixed(1)}deg) rotateX(${tiltX.toFixed(1)}deg) translateY(-4px) scale(1.02)`;
+      phone.style.animation = 'none';
+      phone.style.transform = `perspective(1000px) rotateY(${tiltY.toFixed(1)}deg) rotateX(${tiltX.toFixed(1)}deg) translateY(-4px)`;
     }
 
     wrap.addEventListener('mousemove', (e) => {
@@ -205,11 +206,13 @@ function init3DInteractive() {
     });
 
     wrap.addEventListener('mouseleave', () => {
+      phone.style.animation = '';
       phone.style.transform = '';
     });
 
     wrap.addEventListener('touchstart', () => {
-      phone.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(-6px) scale(1.02)';
+      phone.style.animation = 'none';
+      phone.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(-4px)';
     }, { passive: true });
 
     wrap.addEventListener('touchmove', (e) => {
@@ -220,8 +223,9 @@ function init3DInteractive() {
 
     wrap.addEventListener('touchend', () => {
       setTimeout(() => {
+        phone.style.animation = '';
         phone.style.transform = '';
-      }, 500);
+      }, 300);
     }, { passive: true });
   });
 }

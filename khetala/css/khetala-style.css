@@ -397,6 +397,42 @@
 /* ═══════════════════════════════════════════════
    3. SMARTPHONE DEVICE FRAME & 3D PERSPECTIVE
 ═══════════════════════════════════════════════ */
+@keyframes floatPhone3D {
+  0%, 100% {
+    transform: perspective(1000px) rotateY(-7deg) rotateX(4deg) rotateZ(1deg) translateY(0);
+  }
+  50% {
+    transform: perspective(1000px) rotateY(-3deg) rotateX(2deg) rotateZ(0.5deg) translateY(-8px);
+  }
+}
+
+@keyframes floatPhoneShowcase {
+  0%, 100% {
+    transform: perspective(1000px) rotateY(7deg) rotateX(4deg) rotateZ(-1deg) translateY(0);
+  }
+  50% {
+    transform: perspective(1000px) rotateY(3deg) rotateX(2deg) rotateZ(-0.5deg) translateY(-8px);
+  }
+}
+
+@keyframes floatChipTop {
+  0%, 100% {
+    transform: translateZ(40px) translateY(0);
+  }
+  50% {
+    transform: translateZ(46px) translateY(-5px);
+  }
+}
+
+@keyframes floatChipBottom {
+  0%, 100% {
+    transform: translateZ(40px) translateY(0);
+  }
+  50% {
+    transform: translateZ(46px) translateY(5px);
+  }
+}
+
 .kh-device-wrap {
   perspective: 1200px;
   position: relative;
@@ -417,6 +453,7 @@
   box-sizing: border-box;
   transform-style: preserve-3d;
   transform: perspective(1000px) rotateY(-7deg) rotateX(4deg) rotateZ(1deg);
+  animation: floatPhone3D 6s ease-in-out infinite;
   transition: transform var(--dur-long) var(--ease-out), box-shadow var(--dur-long) var(--ease-out);
   will-change: transform;
   box-shadow: var(--shadow-3d-device);
@@ -515,6 +552,7 @@
 
 /* Interactive Hover Lift */
 .kh-device-wrap:hover .kh-device-phone {
+  animation-play-state: paused;
   transform: perspective(1000px) rotateY(-1deg) rotateX(1deg) translateY(-8px);
   box-shadow: var(--shadow-3d-device-hover);
 }
@@ -522,9 +560,11 @@
 /* Showcase Section Phone Posture */
 .kh-device-phone--showcase {
   transform: perspective(1000px) rotateY(7deg) rotateX(4deg) rotateZ(-1deg);
+  animation: floatPhoneShowcase 6s ease-in-out infinite 0.5s;
 }
 
 .kh-device-wrap:hover .kh-device-phone--showcase {
+  animation-play-state: paused;
   transform: perspective(1000px) rotateY(1deg) rotateX(1deg) translateY(-8px);
 }
 
@@ -552,12 +592,14 @@
   top: 10%;
   left: -16px;
   transform: translateZ(40px);
+  animation: floatChipTop 5s ease-in-out infinite;
 }
 
 .kh-chip-float--bottom {
   bottom: 12%;
   right: -16px;
   transform: translateZ(40px);
+  animation: floatChipBottom 5.5s ease-in-out infinite 0.5s;
 }
 
 .kh-chip-float__icon {
@@ -1402,6 +1444,18 @@
   line-height: 1.6;
 }
 
+/* Contact Grid Layout */
+.kh-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+.kh-contact-col {
+  min-width: 0;
+}
+
 /* Contact Form-Free */
 .kh-contact-block {
   display: flex;
@@ -1413,6 +1467,8 @@
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-card);
   max-width: 480px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .kh-contact-row {
@@ -1423,6 +1479,8 @@
   border-bottom: var(--rule-hair) solid var(--color-rule);
   font-size: var(--text-sm);
   color: var(--color-ink-2);
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .kh-contact-row:last-child {
@@ -1503,6 +1561,42 @@
   }
 
   /* 3D Smartphone Device Mockup on Mobile */
+  @keyframes floatPhoneMobile {
+    0%, 100% {
+      transform: perspective(900px) rotateY(-5deg) rotateX(3deg) translateY(0);
+    }
+    50% {
+      transform: perspective(900px) rotateY(-2deg) rotateX(1.5deg) translateY(-6px);
+    }
+  }
+
+  @keyframes floatPhoneShowcaseMobile {
+    0%, 100% {
+      transform: perspective(900px) rotateY(5deg) rotateX(3deg) translateY(0);
+    }
+    50% {
+      transform: perspective(900px) rotateY(2deg) rotateX(1.5deg) translateY(-6px);
+    }
+  }
+
+  @keyframes floatChipTopMobile {
+    0%, 100% {
+      transform: translateZ(24px) translateY(0);
+    }
+    50% {
+      transform: translateZ(28px) translateY(-4px);
+    }
+  }
+
+  @keyframes floatChipBottomMobile {
+    0%, 100% {
+      transform: translateZ(24px) translateY(0);
+    }
+    50% {
+      transform: translateZ(28px) translateY(4px);
+    }
+  }
+
   .kh-device-wrap {
     perspective: 900px;
     max-width: 300px;
@@ -1511,16 +1605,18 @@
     display: block;
   }
 
-  .kh-device-phone,
-  .kh-device-phone--showcase {
+  .kh-device-phone {
     max-width: 252px;
     margin-inline: auto;
-    transform: perspective(900px) rotateY(-4deg) rotateX(3deg) !important;
+    animation: floatPhoneMobile 5s ease-in-out infinite !important;
     box-shadow: var(--shadow-3d-device-mobile);
   }
 
   .kh-device-phone--showcase {
-    transform: perspective(900px) rotateY(4deg) rotateX(3deg) !important;
+    max-width: 252px;
+    margin-inline: auto;
+    animation: floatPhoneShowcaseMobile 5s ease-in-out infinite 0.5s !important;
+    box-shadow: var(--shadow-3d-device-mobile);
   }
 
   /* Floating Chips in 3D Depth on Mobile */
@@ -1535,12 +1631,20 @@
     top: var(--space-xs);
     left: -4px;
     margin: 0 !important;
+    animation: floatChipTopMobile 4.5s ease-in-out infinite !important;
   }
 
   .kh-chip-float--bottom {
     bottom: var(--space-xs);
     right: -4px;
     margin: 0 !important;
+    animation: floatChipBottomMobile 4.8s ease-in-out infinite 0.5s !important;
+  }
+
+  /* Contact Page Grid Collapse on Tablet and Mobile */
+  .kh-contact-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-xl);
   }
 
   /* Trust Badges - 1 Column on Mobile for Maximum Clarity */
@@ -1598,13 +1702,32 @@
   }
 }
 
+@media (max-width: 36rem) {
+  .kh-contact-block {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .kh-contact-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2xs);
+  }
+
+  .kh-contact-row strong {
+    min-width: unset;
+  }
+}
+
 /* ═══════════════════════════════════════════════
    13. REDUCED MOTION (Floor Rule 7)
 ═══════════════════════════════════════════════ */
 @media (prefers-reduced-motion: reduce) {
   .kh-device-phone,
   .kh-device-phone--showcase,
-  .kh-chip-float {
+  .kh-chip-float,
+  .kh-chip-float--top,
+  .kh-chip-float--bottom {
+    animation: none !important;
     transform: none !important;
     transition: none !important;
   }
