@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Digital Khetala Hisab-Kitab</title>
+  <meta name="description" content="Learn about Digital Khetala Hisab-Kitab: an offline-first Android app built for Nepali farmers and agricultural workers by Saurav Karki of Birtamode, Jhapa.">
+  <link rel="icon" type="image/png" href="images/app_icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Devanagari:wght@400;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/khetala-style.css">
+  <script src="js/khetala-i18n.js"></script>
+</head>
+<body>
+
+<header>
+  <nav class="kh-nav" aria-label="Main navigation">
+    <div class="kh-nav__inner container">
+      <a class="kh-nav__brand" href="index.html" aria-label="Digital Khetala home">
+        <img class="kh-nav__logo" src="images/app_icon.png" alt="Digital Khetala logo" width="36" height="36">
+        <span class="kh-nav__wordmark">
+          <span class="kh-nav__wordmark-title">Digital Khetala</span>
+          <span class="kh-nav__wordmark-sub">Hisab-Kitab</span>
+        </span>
+      </a>
+      <div class="kh-nav__links" role="list">
+        <a href="features.html" role="listitem">Features</a>
+        <a href="download.html" role="listitem">Download</a>
+        <a href="about.html" role="listitem" aria-current="page">About</a>
+        <a href="faq.html" role="listitem">FAQ</a>
+        <a href="contact.html" role="listitem">Contact</a>
+      </div>
+      <div class="kh-nav__actions">
+        <a class="kh-lang-switch" href="np/" data-lang-switch="ne" aria-label="Switch to Nepali">नेपाली</a>
+        <a class="kh-btn kh-btn--primary" href="download.html">Download APK</a>
+      </div>
+      <button class="kh-nav__hamburger" data-hamburger aria-label="Open navigation menu" aria-expanded="false" aria-controls="kh-nav-drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav id="kh-nav-drawer" class="kh-nav__drawer" aria-hidden="true" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="download.html">Download</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a href="np/" data-lang-switch="ne">नेपाली</a>
+    </nav>
+  </nav>
+</header>
+
+<main>
+
+  <!-- Page Hero -->
+  <section class="kh-page-hero">
+    <div class="container">
+      <h1>About Digital Khetala</h1>
+      <p class="lead">Why we built an offline accounting app for Nepal's fields and farms.</p>
+    </div>
+  </section>
+
+  <!-- The Problem -->
+  <section class="kh-section">
+    <div class="container kh-prose">
+      <h2>The Problem</h2>
+      <p>Every monsoon season, rain-soaked paper <em>khata</em> notebooks destroy months of labor records across Nepal’s tea gardens and farm estates. A single downpour in Ilam can wash out an entire season of picking records, triggering wage disputes that harm both workers and landowners.</p>
+      <p>Digital Khetala Hisab-Kitab replaces the paper khata with an offline-first Android app that works in remote fields with no internet connection, built specifically for Nepal’s tea estates in Ilam, potato farms in Jhapa, and cardamom slopes in Panchthar.</p>
+    </div>
+  </section>
+
+  <!-- The App -->
+  <section class="kh-section kh-section--band">
+    <div class="container">
+      <h2>What the App Does</h2>
+      <p class="lead">Eight verified features built for real farm accounting needs.</p>
+      <div class="kh-prose">
+        <ul>
+          <li><strong>Offline-first SQLite database:</strong> All data stored locally via Drift ORM. No internet required for any core feature.</li>
+          <li><strong>Integer paisa arithmetic:</strong> 1 NPR = 100 paisa. All calculations use integer math, with zero rounding errors, ever.</li>
+          <li><strong>Bikram Sambat calendar:</strong> Native Nepali calendar support. Records grouped by BS month, Baisakh to Chaitra.</li>
+          <li><strong>Worker profiles:</strong> Individual profiles per khetala worker with name, default wage, and complete entry history. Unlimited profiles.</li>
+          <li><strong>Audited void entries:</strong> Corrections are logged, never silently deleted. Full audit trail for every change.</li>
+          <li><strong>A4 PDF statements:</strong> Generate and share printable statements directly from your phone. No internet needed.</li>
+          <li><strong>Daily reminders:</strong> Optional notifications at 5 PM and 8 PM to prompt daily record entry.</li>
+          <li><strong>Cloud synchronization:</strong> Google Cloud Firestore synchronizes household records across devices, protecting data if a phone is lost or upgraded.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Developer -->
+  <section class="kh-section">
+    <div class="container">
+      <h2>The Developer</h2>
+      <div class="kh-card">
+        <div class="kh-contact-block">
+          <div class="kh-contact-row">
+            <strong>Name</strong>
+            <span>Saurav Karki</span>
+          </div>
+          <div class="kh-contact-row">
+            <strong>Location</strong>
+            <span>Birtamode, Jhapa, Koshi Province, Nepal</span>
+          </div>
+          <div class="kh-contact-row">
+            <strong>GitHub</strong>
+            <span><a href="https://github.com/saurav-karki1" target="_blank" rel="noopener noreferrer">github.com/saurav-karki1</a></span>
+          </div>
+        </div>
+        <div class="kh-prose" style="margin-top:1.5rem;">
+          <p>A software developer from Jhapa who grew up watching family and neighbors struggle with paper-based farm accounting. This app is built to solve a real, local problem, not to demonstrate technology.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Version Info -->
+  <section class="kh-section kh-section--band">
+    <div class="container">
+      <div class="kh-well" style="text-align:center;">
+        <p><span class="kh-meta-pill">v1.0.0+1</span> <span class="kh-meta-pill">Flutter</span> <span class="kh-meta-pill">Released November 2026</span></p>
+        <p style="margin-top:.75rem;"><a class="kh-btn kh-btn--primary" href="download.html">Download Free APK</a> &nbsp; <a class="kh-btn kh-btn--secondary" href="releases.html">Release History</a></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="kh-footer">
+  <div class="kh-footer__inner container">
+    <div class="kh-footer__brand">
+      <img src="images/app_logo.png" alt="Digital Khetala" width="48" height="48">
+      <p class="kh-footer__tagline">Cloud-Backed Agricultural Accounting with Offline Functionality</p>
+      <p>Built with pride for Nepali farmers and agricultural workers.</p>
+    </div>
+    <nav class="kh-footer__links" aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="download.html">Download</a>
+      <a href="releases.html">Releases</a>
+      <a href="faq.html">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="kh-footer__colophon">
+      <p>Crafted by <a href="https://github.com/saurav-karki1" target="_blank" rel="noopener noreferrer">Saurav Karki</a> · Birtamode, Jhapa, Nepal</p>
+      <p>© 2026 Digital Khetala Hisab-Kitab.</p>
+    </div>
+  </div>
+</footer>
+<div class="kh-toast" role="status" aria-live="polite"></div>
+<script src="js/khetala-i18n.js"></script>
+<script src="js/khetala-main.js" defer></script>
+
+</body>
+</html>

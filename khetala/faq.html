@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | Digital Khetala Hisab-Kitab</title>
+  <meta name="description" content="Frequently asked questions about Digital Khetala Hisab-Kitab: offline functionality, cloud sync, pricing, privacy, Bikram Sambat calendar, and device requirements.">
+  <link rel="icon" type="image/png" href="images/app_icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Devanagari:wght@400;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/khetala-style.css">
+  <script src="js/khetala-i18n.js"></script>
+</head>
+<body>
+
+<header>
+  <nav class="kh-nav" aria-label="Main navigation">
+    <div class="kh-nav__inner container">
+      <a class="kh-nav__brand" href="index.html" aria-label="Digital Khetala home">
+        <img class="kh-nav__logo" src="images/app_icon.png" alt="Digital Khetala logo" width="36" height="36">
+        <span class="kh-nav__wordmark">
+          <span class="kh-nav__wordmark-title">Digital Khetala</span>
+          <span class="kh-nav__wordmark-sub">Hisab-Kitab</span>
+        </span>
+      </a>
+      <div class="kh-nav__links" role="list">
+        <a href="features.html" role="listitem">Features</a>
+        <a href="download.html" role="listitem">Download</a>
+        <a href="about.html" role="listitem">About</a>
+        <a href="faq.html" role="listitem" aria-current="page">FAQ</a>
+        <a href="contact.html" role="listitem">Contact</a>
+      </div>
+      <div class="kh-nav__actions">
+        <a class="kh-lang-switch" href="np/" data-lang-switch="ne" aria-label="Switch to Nepali">नेपाली</a>
+        <a class="kh-btn kh-btn--primary" href="download.html">Download APK</a>
+      </div>
+      <button class="kh-nav__hamburger" data-hamburger aria-label="Open navigation menu" aria-expanded="false" aria-controls="kh-nav-drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav id="kh-nav-drawer" class="kh-nav__drawer" aria-hidden="true" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="download.html">Download</a>
+      <a href="about.html">About</a>
+      <a href="faq.html" aria-current="page">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a href="np/" data-lang-switch="ne">नेपाली</a>
+    </nav>
+  </nav>
+</header>
+
+<main>
+
+  <!-- Page Hero -->
+  <section class="kh-page-hero">
+    <div class="container">
+      <h1>Frequently Asked Questions</h1>
+      <p class="lead">Answers to common questions about offline usage, data privacy, device compatibility, and accounting accuracy.</p>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section class="kh-section">
+    <div class="container">
+      <div class="kh-accordion">
+
+        <div class="kh-accordion__item" data-open="true">
+          <button class="kh-accordion__trigger" aria-expanded="true">
+            <span>Does the app require an active internet connection?</span>
+            <svg class="kh-accordion__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="kh-accordion__content">
+            <div class="kh-accordion__body">
+              The app works offline in remote fields using local SQLite storage. All worker profiles, daily picking records, advances, and ledger calculations operate directly without cellular signal or Wi-Fi. When connectivity returns, pending records synchronize with Cloud Firestore.
+            </div>
+          </div>
+        </div>
+
+        <div class="kh-accordion__item">
+          <button class="kh-accordion__trigger" aria-expanded="false">
+            <span>How does cloud storage and synchronization work?</span>
+            <svg class="kh-accordion__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="kh-accordion__content">
+            <div class="kh-accordion__body">
+              Digital Khetala Hisab-Kitab combines local-first Drift SQLite storage with Cloud Firestore synchronization. You can record work and payments offline without internet. When your phone connects to the network, pending changes automatically synchronize with your private household in Cloud Firestore, enabling multi-device access and protecting your records if your phone is replaced.
+            </div>
+          </div>
+        </div>
+
+        <div class="kh-accordion__item">
+          <button class="kh-accordion__trigger" aria-expanded="false">
+            <span>What happens if I lose, break, or replace my phone?</span>
+            <svg class="kh-accordion__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="kh-accordion__content">
+            <div class="kh-accordion__body">
+              Because your household records are synchronized with Cloud Firestore, you simply sign in to the same account on your new Android phone to restore your complete farm ledger. Additionally, you can create offline JSON backups with SHA-256 verification at any time for secondary local archiving.
+            </div>
+          </div>
+        </div>
+
+        <div class="kh-accordion__item">
+          <button class="kh-accordion__trigger" aria-expanded="false">
+            <span>Can I use the app on multiple phones simultaneously?</span>
+            <svg class="kh-accordion__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="kh-accordion__content">
+            <div class="kh-accordion__body">
+              Yes, provided both devices are signed in with the same Firebase household account. Note that cloud sync uses a timestamped last-write-wins merge strategy. To avoid conflicting records, we recommend designating one primary phone for daily field entries.
+            </div>
+          </div>
+        </div>
+
+        <div class="kh-accordion__item">
+          <button class="kh-accordion__trigger" aria-expanded="false">
+            <span>How much does Digital Khetala Hisab-Kitab cost?</span>
+            <svg class="kh-accordion__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="kh-accordion__content">
+            <div class="kh-accordion__body">
+              The application is 100% free. There are no download charges, no monthly subscription fees, no advertisements, and no locked premium features.
+            </div>
+          </div>
+        </div>
+
+        <div class="kh-accordion__item">
+          <button class="kh-accordion__trigger" aria-expanded="false">
+            <span>Does the app support the Bikram Sambat (वि.सं.) Nepali calendar?</span>
+            <svg class="kh-accordion__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="kh-accordion__content">
+            <div class="kh-accordion__body">
+              Yes. Native Bikram Sambat support is built into the core date picker and ledger groupings. Entries are categorized by Nepali months (Baisakh, Jestha, Ashadh, Shrawan, Bhadra, Ashwin, Kartik, Mangsir, Poush, Magh, Falgun, Chaitra) matching how agricultural wages are settled across Nepal.
+            </div>
+          </div>
+        </div>
+
+        <div class="kh-accordion__item">
+          <button class="kh-accordion__trigger" aria-expanded="false">
+            <span>Can I print or share statements with workers?</span>
+            <svg class="kh-accordion__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="kh-accordion__content">
+            <div class="kh-accordion__body">
+              Yes. The app generates clean, professional A4 PDF statements on-device. Statements include worker details, date-by-date labor entries, weight-based calculations, cash advance deductions, and final net payout figures. You can share PDFs directly via WhatsApp, email, or send them to any local printer.
+            </div>
+          </div>
+        </div>
+
+        <div class="kh-accordion__item">
+          <button class="kh-accordion__trigger" aria-expanded="false">
+            <span>What Android versions are compatible?</span>
+            <svg class="kh-accordion__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="kh-accordion__content">
+            <div class="kh-accordion__body">
+              The app requires Android 5.0 (Lollipop, API Level 21) or newer. It is optimized for modern Android versions up to Android 14 (API 34) and runs smoothly on budget-friendly smartphones with limited RAM.
+            </div>
+          </div>
+        </div>
+
+        <div class="kh-accordion__item">
+          <button class="kh-accordion__trigger" aria-expanded="false">
+            <span>Is my farm financial data kept private?</span>
+            <svg class="kh-accordion__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="kh-accordion__content">
+            <div class="kh-accordion__body">
+              Yes. Your ledger entries, worker names, wage rates, and cash advances remain strictly on your local device. If you use cloud sync, data is encrypted in transit and stored inside your own authenticated Firebase account. No third-party ad networks or tracking libraries are included in the app.
+            </div>
+          </div>
+        </div>
+
+        <div class="kh-accordion__item">
+          <button class="kh-accordion__trigger" aria-expanded="false">
+            <span>How does exact integer paisa arithmetic prevent disputes?</span>
+            <svg class="kh-accordion__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="kh-accordion__content">
+            <div class="kh-accordion__body">
+              Standard software often calculates currency using floating-point numbers, which introduces subtle rounding errors (e.g., 0.1 + 0.2 = 0.30000000000000004). Digital Khetala represents all monetary values as integer paisa (1 NPR = 100 paisa). Every calculation is performed with exact integer math, ensuring totals on paper receipts and digital screens always balance down to the last paisa.
+            </div>
+          </div>
+        </div>
+
+        <div class="kh-accordion__item">
+          <button class="kh-accordion__trigger" aria-expanded="false">
+            <span>What is an "audited void" entry?</span>
+            <svg class="kh-accordion__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="kh-accordion__content">
+            <div class="kh-accordion__body">
+              When an entry is entered by mistake, the app does not silently delete the database row. Instead, it marks the entry as "voided" and records the timestamp and reason. This maintains an immutable historical audit trail, preventing accusations of tampering or accidental loss of record history.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="kh-section kh-section--band">
+    <div class="container" style="text-align: center;">
+      <h2>Still have questions?</h2>
+      <p class="lead" style="margin-inline: auto;">Reach out directly to the developer or download the app to test it on your farm.</p>
+      <div style="margin-top: var(--space-xl); display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+        <a class="kh-btn kh-btn--primary" href="download.html">Download APK (70.2 MB)</a>
+        <a class="kh-btn kh-btn--secondary" href="contact.html">Contact Developer</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="kh-footer">
+  <div class="kh-footer__inner container">
+    <div class="kh-footer__brand">
+      <img src="images/app_logo.png" alt="Digital Khetala" width="48" height="48">
+      <p class="kh-footer__tagline">Cloud-Backed Agricultural Accounting with Offline Functionality</p>
+      <p>Built with pride for Nepali farmers and agricultural workers.</p>
+    </div>
+    <nav class="kh-footer__links" aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="download.html">Download</a>
+      <a href="releases.html">Releases</a>
+      <a href="faq.html">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="kh-footer__colophon">
+      <p>Crafted by <a href="https://github.com/saurav-karki1" target="_blank" rel="noopener noreferrer">Saurav Karki</a> · Birtamode, Jhapa, Nepal</p>
+      <p>© 2026 Digital Khetala Hisab-Kitab.</p>
+    </div>
+  </div>
+</footer>
+<div class="kh-toast" role="status" aria-live="polite"></div>
+<script src="js/khetala-main.js" defer></script>
+
+</body>
+</html>

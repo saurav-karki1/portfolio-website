@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>डिजिटल खेताला हिसाब-किताब | खेतालाको काम र भुक्तानी अब सजिलैसँग व्यवस्थापन गर्नुहोस्</title>
+  <meta name="description" content="दैनिक खेतबारीको काम, ज्याला भुक्तानी, पेश्की र बाँकी हिसाब एकै ठाउँमा सुरक्षित राख्नुहोस्। नेपालका किसानका लागि अफलाइन सुविधा सहितको क्लाउड-आधारित कृषि खता।">
+  <meta name="author" content="Saurav Karki">
+  <link rel="canonical" href="https://www.sauravkarki1.com.np/khetala/np/">
+  <link rel="alternate" hreflang="en" href="https://www.sauravkarki1.com.np/khetala/">
+  <link rel="alternate" hreflang="ne" href="https://www.sauravkarki1.com.np/khetala/np/">
+  <!-- Open Graph -->
+  <meta property="og:title" content="डिजिटल खेताला हिसाब-किताब – खेतालाको काम र भुक्तानी अब सजिलैसँग व्यवस्थापन गर्नुहोस्">
+  <meta property="og:description" content="दैनिक खेतबारीको काम, ज्याला भुक्तानी, पेश्की र बाँकी हिसाब एकै ठाउँमा सुरक्षित राख्नुहोस्। अफलाइन सुविधा सहितको क्लाउड-आधारित आधुनिक कृषि खता।">
+  <meta property="og:image" content="../images/app_logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.sauravkarki1.com.np/khetala/np/">
+  <meta property="og:locale" content="ne_NP">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Devanagari:wght@400;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/khetala-style.css">
+  <link rel="icon" type="image/png" href="../images/app_icon.png">
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "डिजिटल खेताला हिसाब-किताब",
+    "operatingSystem": "Android 5.0+",
+    "applicationCategory": "BusinessApplication",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "NPR"},
+    "downloadUrl": "https://github.com/saurav-karki1/portfolio-website/releases/download/v1.0.0/Hisab-Kitab-release.apk",
+    "softwareVersion": "1.0.0",
+    "fileSize": "70.2 MB",
+    "inLanguage": "ne",
+    "author": {"@type": "Person", "name": "Saurav Karki", "address": {"@type": "PostalAddress", "addressLocality": "Birtamode", "addressRegion": "Jhapa", "addressCountry": "NP"}},
+    "description": "नेपाली किसान र चिया बगान मालिकहरूका लागि अफलाइन सुविधा सहितको क्लाउड-आधारित कृषि श्रम हिसाब-किताब।"
+  }
+  </script>
+  <script src="../js/khetala-i18n.js"></script>
+</head>
+<body>
+
+  <!-- ─── NAVIGATION ─── -->
+  <header>
+    <nav class="kh-nav" aria-label="मुख्य नेभिगेसन">
+      <div class="kh-nav__inner container">
+        <a class="kh-nav__brand" href="index.html" aria-label="डिजिटल खेताला गृहपृष्ठ">
+          <img class="kh-nav__logo" src="../images/app_icon.png" alt="डिजिटल खेताला लोगो" width="36" height="36">
+          <span class="kh-nav__wordmark">
+            <span class="kh-nav__wordmark-title">डिजिटल खेताला</span>
+            <span class="kh-nav__wordmark-sub">हिसाब-किताब</span>
+          </span>
+        </a>
+        <div class="kh-nav__links" role="list">
+          <a href="../features.html" role="listitem">सुविधाहरू</a>
+          <a href="../download.html" role="listitem">डाउनलोड</a>
+          <a href="../about.html" role="listitem">बारेमा</a>
+          <a href="../faq.html" role="listitem">प्रश्नहरू</a>
+          <a href="../contact.html" role="listitem">सम्पर्क</a>
+        </div>
+        <div class="kh-nav__actions">
+          <a class="kh-lang-switch" href="../" data-lang-switch="en" aria-label="Switch to English">English</a>
+          <a class="kh-btn kh-btn--primary" href="../download.html">APK डाउनलोड</a>
+        </div>
+        <button class="kh-nav__hamburger" data-hamburger aria-label="नेभिगेसन मेनु खोल्नुहोस्" aria-expanded="false" aria-controls="kh-nav-drawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav id="kh-nav-drawer" class="kh-nav__drawer" aria-hidden="true" aria-label="मोबाइल नेभिगेसन">
+        <a href="index.html">गृहपृष्ठ</a>
+        <a href="../features.html">सुविधाहरू</a>
+        <a href="../download.html">डाउनलोड</a>
+        <a href="../about.html">बारेमा</a>
+        <a href="../faq.html">प्रश्नहरू</a>
+        <a href="../contact.html">सम्पर्क</a>
+        <a href="../" data-lang-switch="en">English</a>
+      </nav>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ─── HERO ─── -->
+    <section class="kh-hero">
+      <div class="kh-hero__grid container">
+        <div class="kh-hero__copy">
+          <span class="kh-hero__badge" role="status">
+            <span class="kh-hero__badge-dot"></span>
+            अफलाइन सुविधा सहितको क्लाउड-आधारित कृषि हिसाब-किताब
+          </span>
+          <h1 class="kh-hero__headline">खेतालाको काम र भुक्तानी अब सजिलैसँग व्यवस्थापन गर्नुहोस्।</h1>
+          <p class="kh-hero__subtitle">दैनिक काम, ज्याला, पेश्की र बाँकी हिसाब एकै ठाउँमा।</p>
+          <div class="kh-hero__actions">
+            <a class="kh-btn kh-btn--primary" href="../download.html">APK नि:शुल्क डाउनलोड गर्नुहोस् (v1.0.0)</a>
+            <a class="kh-btn kh-btn--secondary" href="../features.html">सुविधाहरू हेर्नुहोस्</a>
+          </div>
+          <p class="kh-hero__meta"><span class="kh-meta-pill">नि:शुल्क एन्ड्रोइड एप</span> <span class="kh-meta-pill">v1.0.0</span> <span class="kh-meta-pill">७०.२ MB</span> <span class="kh-meta-pill">कुनै विज्ञापन छैन</span></p>
+        </div>
+
+        <div class="kh-hero__visual">
+          <div class="kh-device-wrap">
+            <!-- Floating Highlight Chips -->
+            <div class="kh-chip-float kh-chip-float--top" role="status">
+              <span class="kh-chip-float__icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+              </span>
+              <span>क्लाउड सिङ्क्रोनाइज्ड</span>
+            </div>
+
+            <div class="kh-chip-float kh-chip-float--bottom" role="status">
+              <span class="kh-chip-float__badge" aria-hidden="true">रू</span>
+              <span>पैसा स्तरको हिसाब</span>
+            </div>
+
+            <!-- Realistic Smartphone Frame -->
+            <div class="kh-device-phone">
+              <div class="kh-device-phone__speaker" aria-hidden="true"></div>
+              <div class="kh-device-phone__screen">
+                <div class="kh-device-phone__camera" aria-hidden="true"></div>
+                <img
+                  class="kh-device-phone__img"
+                  src="../images/screenshot-dashboard.jpg"
+                  alt="डिजिटल खेताला हिसाब-किताब एन्ड्रोइड ड्यासबोर्डमा कामदार संख्या, पेश्की रकम र हालको गतिविधि"
+                  width="468"
+                  height="1024"
+                  loading="eager"
+                  decoding="async"
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="kh-trust-row container">
+        <div class="kh-trust-item">
+          <div class="kh-trust-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <strong class="kh-trust-item__title">लोकल-फर्स्ट अफलाइन</strong>
+          <span class="kh-trust-item__desc">मोबाइल नेटवर्क नहुँदा पनि खेतबारीमै सुरक्षित</span>
+        </div>
+        <div class="kh-trust-item">
+          <div class="kh-trust-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><line x1="8" y1="10" x2="8" y2="10.01"/><line x1="12" y1="10" x2="12" y2="10.01"/><line x1="16" y1="10" x2="16" y2="10.01"/><line x1="8" y1="14" x2="8" y2="14.01"/><line x1="12" y1="14" x2="12" y2="14.01"/><line x1="8" y1="18" x2="8" y2="18.01"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
+          </div>
+          <strong class="kh-trust-item__title">सटीक पैसा गणित</strong>
+          <span class="kh-trust-item__desc">पूर्णाङ्क हिसाब, शून्य दशमलव वा गोलाई त्रुटि</span>
+        </div>
+        <div class="kh-trust-item">
+          <div class="kh-trust-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <strong class="kh-trust-item__title">विक्रम सम्बत</strong>
+          <span class="kh-trust-item__desc">नेपाली क्यालेन्डर, बैशाखदेखि चैत्रसम्म</span>
+        </div>
+        <div class="kh-trust-item">
+          <div class="kh-trust-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          </div>
+          <strong class="kh-trust-item__title">क्लाउड सिङ्क र गोपनीयता</strong>
+          <span class="kh-trust-item__desc">फायरस्टोर सिङ्क र कडा पारिवारिक डेटा सुरक्षा</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── समस्या बनाम समाधान ─── -->
+    <section class="kh-section kh-section--band" id="problem">
+      <div class="container">
+        <div class="kh-section__header">
+          <span class="kh-section__eyebrow">कृषि वास्तविकता</span>
+          <h2>कागजको खाता किन असफल हुन्छ</h2>
+        </div>
+        <div class="kh-problem-solution">
+          <div class="kh-problem">
+            <h3>कागजी खाताको समस्या</h3>
+            <ul>
+              <li>पानी र चिस्यानले महिनौंको रेकर्ड नष्ट गर्छ</li>
+              <li>नपढिने हस्तलेखनले ज्याला विवाद निम्त्याउँछ</li>
+              <li>चालु जोड नहुँदा भुक्तानी दिन अन्दाजमा हुन्छ</li>
+              <li>खाता हराउँदा भुक्तानीको प्रमाण हराउँछ</li>
+              <li>छरपष्ट एन्ट्रीमा धेरै कामदारहरू मिसिन्छन्</li>
+            </ul>
+          </div>
+          <div class="kh-solution">
+            <h3>डिजिटल खेतालाको समाधान</h3>
+            <ul>
+              <li>सुरक्षित: डाटा स्थानीय अफलाइन बस्छ र क्लाउडमा सिङ्क हुन्छ</li>
+              <li>हरेक एन्ट्री सटीक रकमसहित स्पष्ट रूपमा टाइप गरिएको</li>
+              <li>प्रत्येक कामदारको चालु ब्यालेन्स तुरुन्तै अपडेट</li>
+              <li>जुनसुकै बेला पूरा इतिहास निर्यात र ब्याकअप</li>
+              <li>प्रत्येक कामदारको समर्पित प्रोफाइल र खाता</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── APP PREVIEW / WORKER LEDGER SHOWCASE ─── -->
+    <section class="kh-section kh-showcase" id="showcase">
+      <div class="container">
+        <div class="kh-showcase__grid">
+          <div class="kh-showcase__phone-col">
+            <div class="kh-device-wrap">
+              <div class="kh-chip-float kh-chip-float--top" role="status">
+                <span class="kh-chip-float__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <span>हिसाब साफ (Settled)</span>
+              </div>
+
+              <div class="kh-chip-float kh-chip-float--bottom" role="status">
+                <span class="kh-chip-float__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>
+                </span>
+                <span>A4 PDF हिसाब विवरण</span>
+              </div>
+
+              <div class="kh-device-phone kh-device-phone--showcase">
+                <div class="kh-device-phone__speaker" aria-hidden="true"></div>
+                <div class="kh-device-phone__screen">
+                  <div class="kh-device-phone__camera" aria-hidden="true"></div>
+                  <img
+                    class="kh-device-phone__img"
+                    src="../images/screenshot-worker-ledger.jpg"
+                    alt="डिजिटल खेताला हिसाब-किताब कामदार खता स्क्रिन: शून्य बाँकी, सुरुवाती ब्यालेन्स, कुल कमाई र PDF निर्यात"
+                    width="468"
+                    height="1024"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="kh-showcase__content">
+            <div class="kh-showcase__header">
+              <span class="kh-section__eyebrow">व्यक्तिगत खता प्रणाली</span>
+              <h2>प्रत्येक कामदारको पारदर्शी हिसाब-किताब</h2>
+              <p class="lead">कामदारको व्यक्तिगत खता स्क्रिनको झलक। प्रत्येक कृषि मजदुरको कमाई, पेश्की र बाँकी हिसाबको गणितीय शुद्धता सहितको छुट्टै विवरण।</p>
+            </div>
+
+            <div class="kh-showcase__cards">
+              <div class="kh-showcase__item">
+                <div class="kh-showcase__item-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                </div>
+                <div class="kh-showcase__item-body">
+                  <h3>कामदार प्रोफाइल र साफ स्थिति</h3>
+                  <p>सुरुवाती ब्यालेन्स, कुल कमाई र भुक्तानीको तत्काल गणना। ब्यालेन्स शून्य हुँदा स्पष्ट हरियो ब्याच प्रदर्शन।</p>
+                </div>
+              </div>
+
+              <div class="kh-showcase__item">
+                <div class="kh-showcase__item-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>
+                </div>
+                <div class="kh-showcase__item-body">
+                  <h3>१-ट्याप आधिकारिक PDF विवरण</h3>
+                  <p>कामदारको पूरा खता सफा A4 PDF विवरणका रूपमा उत्पादन गर्नुहोस्, प्रिन्ट गर्नुहोस् वा ह्वाट्सएपमा पठाउनुहोस्।</p>
+                </div>
+              </div>
+
+              <div class="kh-showcase__item">
+                <div class="kh-showcase__item-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                </div>
+                <div class="kh-showcase__item-body">
+                  <h3>अपरिवर्तनीय अडिट लग</h3>
+                  <p>विगतको दर कहिल्यै फेरिँदैन। कुनै विवरण सच्याउनु परेमा कारण खुलाएर रद्द (Void) हुने पारदर्शी प्रणाली।</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── सुविधाहरू ─── -->
+    <section class="kh-section" id="features">
+      <div class="container">
+        <div class="kh-section__header">
+          <span class="kh-section__eyebrow">मुख्य सुविधाहरू</span>
+          <h2>नेपाली खेतका लागि बनाइएको</h2>
+          <p class="lead">पूर्वी नेपालका चिया बगान व्यवस्थापक, आलु खेत मालिक, र कृषि श्रम ठेकेदारहरूको वास्तविक कार्यप्रवाहमा आधारित।</p>
+        </div>
+        <div class="kh-features-grid">
+          <div class="kh-feature-card">
+            <div class="kh-feature-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
+            <h3>अफलाइन SQLite डेटाबेस</h3>
+            <p>तपाईंको डेटा तपाईंको यन्त्रमा रहन्छ। इन्टरनेट चाहिँदैन। इलामका चिया बगान, झापाका आलु खेत, र पाँचथरका अलैंची बगानमा बिना सिग्नल काम गर्छ।</p>
+          </div>
+          <div class="kh-feature-card">
+            <div class="kh-feature-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><line x1="8" y1="10" x2="8" y2="10.01"/><line x1="12" y1="10" x2="12" y2="10.01"/><line x1="16" y1="10" x2="16" y2="10.01"/><line x1="8" y1="14" x2="8" y2="14.01"/><line x1="12" y1="14" x2="12" y2="14.01"/><line x1="8" y1="18" x2="8" y2="18.01"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg></div>
+            <h3>सटीक पूर्णाङ्क पैसा गणित</h3>
+            <p>प्रत्येक नेपाली रुपैयाँ १०० पैसामा विभाजित। पूर्णाङ्क गणितले ज्याला विवाद निम्त्याउने फ्लोटिंग-पोइन्ट त्रुटिहरू हटाउँछ।</p>
+          </div>
+          <div class="kh-feature-card">
+            <div class="kh-feature-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+            <h3>विक्रम सम्बत क्यालेन्डर</h3>
+            <p>नेपाली क्यालेन्डर समर्थन। बैशाख (बैशाख) देखि चैत्र (चैत्र) सम्म महिना अनुसार खाता वर्गीकरण। तपाईंको रेकर्ड नेपालले समय गन्ने तरिकासँग मिल्छ।</p>
+          </div>
+          <div class="kh-feature-card">
+            <div class="kh-feature-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <h3>कामदार प्रोफाइल र दर</h3>
+            <p>प्रत्येक खेताला कामदारको लागि पूर्वनिर्धारित दैनिक दरसहित प्रोफाइल। मौसमी वा कार्य-आधारित काम जस्तै केजी अनुसार चिया टिपाईका लागि दर परिवर्तन।</p>
+          </div>
+          <div class="kh-feature-card">
+            <div class="kh-feature-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+            <h3>लेखापरीक्षित भोइड</h3>
+            <p>गल्ती हुन्छ। भोइड गरिएका एन्ट्रीहरू लेखापरीक्षित रेकर्डको रूपमा सुरक्षित (चुपचाप मेटिँदैन)। पूर्ण इतिहास, पूर्ण जवाफदेही।</p>
+          </div>
+          <div class="kh-feature-card">
+            <div class="kh-feature-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+            <h3>PDF विवरण उत्पादन</h3>
+            <p>यन्त्रमा नै A4 PDF विवरण बनाउनुहोस्। WhatsApp वा इमेल मार्फत सिधै साझा गर्नुहोस्। बहु-पृष्ठ इतिहासका लागि २५-पंक्ति खण्ड।</p>
+          </div>
+          <div class="kh-feature-card">
+            <div class="kh-feature-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+            <h3>दैनिक रिमाइन्डर</h3>
+            <p>दिनभरको खेतको काम बिर्सनु अघि लेख्न साँझ ५ बजे र राति ८ बजे रिमाइन्डर। स्थानीय रूपमा, कुनै सर्भर चाहिँदैन।</p>
+          </div>
+          <div class="kh-feature-card">
+            <div class="kh-feature-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+            <h3>क्लाउड सिङ्क्रोनाइजेसन</h3>
+            <p>क्लाउड फायरस्टोर मार्फत परिवारको हिसाब स्वतः सिङ्क हुने सुविधा। फोन हराएमा वा नयाँ फोनमा सरे पनि हिसाब सुरक्षित रहन्छ।</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── यसले कसरी काम गर्छ ─── -->
+    <section class="kh-section kh-section--band" id="how-it-works">
+      <div class="container">
+        <div class="kh-section__header">
+          <span class="kh-section__eyebrow">चार चरण</span>
+          <h2>यसले कसरी काम गर्छ</h2>
+        </div>
+        <div class="kh-steps">
+          <div class="kh-step">
+            <h3>कामदारहरू थप्नुहोस्</h3>
+            <p>प्रत्येक खेताला कामदारको नाम र पूर्वनिर्धारित दैनिक ज्याला दर सहित प्रोफाइल बनाउनुहोस्।</p>
+          </div>
+          <div class="kh-step">
+            <h3>दैनिक काम रेकर्ड गर्नुहोस्</h3>
+            <p>हरेक दिनको काम लेख्नुहोस्: टिपाइ प्रकार, केजी वा घण्टा, र विक्रम सम्बतमा मिति।</p>
+          </div>
+          <div class="kh-step">
+            <h3>पेश्की व्यवस्थापन</h3>
+            <p>नगद पेश्की (अग्रिम भुक्तानी) रेकर्ड गर्नुहोस् र बाँकी ज्यालाबाट स्वचालित रूपमा कटौती।</p>
+          </div>
+          <div class="kh-step">
+            <h3>भुक्तानी र साझा</h3>
+            <p>सबै एन्ट्री, पेश्की, र बाँकी रकम देखाउने PDF विवरण बनाउनुहोस्। WhatsApp मार्फत साझा गर्नुहोस्।</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── डाउनलोड CTA ─── -->
+    <section class="kh-section" id="download">
+      <div class="container">
+        <div class="kh-section__header">
+          <span class="kh-section__eyebrow">एप प्राप्त गर्नुहोस्</span>
+          <h2>एन्ड्रोइडमा डाउनलोड</h2>
+        </div>
+        <div class="kh-download-hero">
+          <div class="kh-download-copy">
+            <div class="kh-download-meta">
+              <span class="kh-meta-pill">v1.0.0</span>
+              <span class="kh-meta-pill">७०.२ MB</span>
+              <span class="kh-meta-pill">एन्ड्रोइड ५.०+</span>
+              <span class="kh-meta-pill">नि:शुल्क</span>
+            </div>
+            <a class="kh-btn kh-btn--primary" href="../download.html">APK डाउनलोड र इन्स्टल गाइड</a>
+          </div>
+          <div class="kh-qr-block">
+            <img src="../images/qr-download.svg" alt="डाउनलोड पृष्ठ भ्रमण गर्न QR स्क्यान गर्नुहोस्" width="140" height="140">
+            <p>डाउनलोड पृष्ठ खोल्न स्क्यान गर्नुहोस्</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── FAQ ─── -->
+    <section class="kh-section kh-section--band" id="faq">
+      <div class="container">
+        <div class="kh-section__header">
+          <span class="kh-section__eyebrow">सामान्य प्रश्नहरू</span>
+          <h2>बारम्बार सोधिने प्रश्न</h2>
+        </div>
+        <div class="kh-accordion">
+          <div class="kh-accordion__item">
+            <button class="kh-accordion__trigger" aria-expanded="false">के एपलाई इन्टरनेट चाहिन्छ?<svg class="kh-accordion__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+            <div class="kh-accordion__content"><div class="kh-accordion__body">पर्दैन। डिजिटल खेताला हिसाब-किताब स्थानीय-पहिलो ड्रिफ्ट एसक्यूलाइट इन्जिनमा चल्छ। दैनिक काम, ज्याला र पेश्की इन्टरनेट नभएको खेतबारीमै बिना रोकावट सुरक्षित हुन्छ र इन्टरनेट पाउनासाथ क्लाउडमा सिङ्क हुन्छ।</div></div>
+          </div>
+          <div class="kh-accordion__item">
+            <button class="kh-accordion__trigger" aria-expanded="false">क्लाउड सिङ्कले मेरो हिसाब कसरी जोगाउँछ?<svg class="kh-accordion__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+            <div class="kh-accordion__content"><div class="kh-accordion__body">आफ्नो खाताबाट लगइन गरेपछि तपाईंको सम्पूर्ण पारिवारिक हिसाब सुरक्षित रूपमा क्लाउड फायरस्टोरमा सिङ्क हुन्छ। मोबाइल बिग्रिएमा वा नयाँ फोन किन्दा पनि खाता खोलेर सबै पुरानो हिसाब तुरुन्तै फिर्ता पाउन सकिन्छ।</div></div>
+          </div>
+          <div class="kh-accordion__item">
+            <button class="kh-accordion__trigger" aria-expanded="false">एपको मूल्य कति हो?<svg class="kh-accordion__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+            <div class="kh-accordion__content"><div class="kh-accordion__body">डिजिटल खेताला हिसाब-किताब पूर्ण रूपमा नि:शुल्क छ। कुनै सदस्यता शुल्क, कुनै विज्ञापन, कुनै इन-एप खरिद, र कुनै प्रिमियम तह छैन।</div></div>
+          </div>
+          <div class="kh-accordion__item">
+            <button class="kh-accordion__trigger" aria-expanded="false">के एप नेपाली क्यालेन्डरमा काम गर्छ?<svg class="kh-accordion__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+            <div class="kh-accordion__content"><div class="kh-accordion__body">गर्छ। एपले विक्रम सम्बत (वि.सं.) मितिलाई मूल रूपमा समर्थन गर्छ। रेकर्डहरू बैशाख देखि चैत्र सम्म महिना अनुसार समूहीकृत हुन्छन्।</div></div>
+          </div>
+          <div class="kh-accordion__item">
+            <button class="kh-accordion__trigger" aria-expanded="false">के मेरो खेतको डाटा निजी छ?<svg class="kh-accordion__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+            <div class="kh-accordion__content"><div class="kh-accordion__body">छ। तपाईंको विवरण फोन र तपाईंको आफ्नै निजी फायरस्टोर घरपरिवार खातामा मात्र रहन्छ। कडा सुरक्षा नियमका कारण अरू कसैले यसलाई हेर्न वा चलाउन पाउँदैन।</div></div>
+          </div>
+        </div>
+        <p style="margin-top: var(--space-xl);">
+          <a class="kh-btn kh-btn--secondary" href="../faq.html">सबै प्रश्नहरू हेर्नुहोस्</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="kh-footer">
+    <div class="kh-footer__inner container">
+      <div class="kh-footer__brand">
+        <a class="kh-footer__brand-name" href="index.html">डिजिटल खेताला हिसाब-किताब</a>
+        <p class="kh-footer__tagline">अफलाइन सुविधा सहितको क्लाउड-आधारित कृषि हिसाब-किताब</p>
+        <p class="kh-footer__tagline">नेपाली किसान र कृषि कामदारहरूका लागि गर्वका साथ निर्मित।</p>
+      </div>
+      <div>
+        <p class="kh-footer__col-title">उत्पादन</p>
+        <ul class="kh-footer__links">
+          <li><a href="../features.html">सुविधाहरू</a></li>
+          <li><a href="../download.html">डाउनलोड</a></li>
+          <li><a href="../releases.html">रिलिजहरू</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="kh-footer__col-title">सहायता</p>
+        <ul class="kh-footer__links">
+          <li><a href="../faq.html">प्रश्नहरू</a></li>
+          <li><a href="../contact.html">सम्पर्क</a></li>
+          <li><a href="../about.html">बारेमा</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="kh-footer__col-title">कानुनी</p>
+        <ul class="kh-footer__links">
+          <li><a href="../privacy.html">गोपनीयता नीति</a></li>
+          <li><a href="../terms.html">सेवाका सर्तहरू</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="kh-footer__divider container">
+    <div class="kh-footer__colophon container">
+      <p><a href="https://github.com/saurav-karki1" target="_blank" rel="noopener noreferrer">सौरभ कार्की</a> द्वारा निर्मित · बिर्तामोड, झापा, नेपाल</p>
+      <p>© २०२६ डिजिटल खेताला हिसाब-किताब।</p>
+    </div>
+  </footer>
+
+  <div class="kh-toast" role="status" aria-live="polite"></div>
+  <script src="../js/khetala-main.js" defer></script>
+</body>
+</html>

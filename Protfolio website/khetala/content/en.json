@@ -1,0 +1,518 @@
+{
+  "meta": {
+    "site_title": "Digital Khetala Hisab-Kitab | Manage Farm Workers and Payments Easily",
+    "meta_description": "Manage farm workers, tea harvesting by weight, cash advances (peshki), and wage payments easily. Cloud-backed agricultural accounting with offline functionality for Nepal.",
+    "keywords": "khetala hisab kitab, manage farm workers, agricultural accounting nepal, tea picking calculation, bikram sambat ledger, offline farm bookkeeping, peshki hisab, jhapa ilam agriculture app, cloud firestore farm sync",
+    "og_title": "Digital Khetala Hisab-Kitab — Manage Farm Workers and Payments Easily",
+    "og_description": "Keep track of daily farm work, worker payments, cash advances, and outstanding balances in one place. Cloud-backed with offline functionality and Bikram Sambat calendar.",
+    "og_image": "images/app_logo.png",
+    "canonical": "https://www.sauravkarki1.com.np/khetala/",
+    "locale": "en",
+    "author": "Saurav Karki"
+  },
+  "nav": {
+    "brand_title": "Digital Khetala",
+    "brand_subtitle": "Hisab-Kitab",
+    "links": {
+      "problem": "Why Digital",
+      "features": "Features",
+      "showcase": "App Preview",
+      "how_it_works": "How It Works",
+      "install": "Install Guide",
+      "faq": "FAQ",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "download_btn": "Download APK",
+    "language_switch": "नेपाली"
+  },
+  "hero": {
+    "badge": "Cloud-Backed Agricultural Accounting with Offline Functionality",
+    "headline": "Manage Farm Workers and Payments Easily.",
+    "subtitle": "Keep track of daily farm work, worker payments, cash advances, and outstanding balances in one place. Designed for Nepal's agricultural households and farm managers.",
+    "cta_download": "Download Free APK (v1.0.0)",
+    "cta_features": "Explore Core Features",
+    "cta_release_info": "Free Android App • v1.0.0 • 70.20 MB • No Ads",
+    "trust_badges": [
+      {
+        "icon": "database",
+        "title": "Local-First Offline Storage",
+        "desc": "Drift SQLite records work seamlessly in remote fields with zero cell coverage"
+      },
+      {
+        "icon": "calculator",
+        "title": "Exact Integer Paisa Math",
+        "desc": "1 NPR = 100 paisa arithmetic eliminates floating-point calculation errors"
+      },
+      {
+        "icon": "calendar",
+        "title": "Bikram Sambat (वि.सं.)",
+        "desc": "Native Nepali calendar with monthly ledger grouping from Baisakh to Chaitra"
+      },
+      {
+        "icon": "shield-check",
+        "title": "Cloud Sync & Privacy",
+        "desc": "Cloud Firestore syncs your household across devices with strict private access"
+      }
+    ],
+    "hero_card": {
+      "farm_name": "Karki Tea & Cardamom Estate",
+      "location": "Birtamode, Jhapa",
+      "active_workers": "14 Active Workers",
+      "sample_worker": "Ram Bahadur Rai",
+      "sample_task": "Green Leaf Tea Picking",
+      "sample_amount": "24.5 kg",
+      "sample_rate": "रू 28 / kg",
+      "sample_earnings": "रू 686.00",
+      "sample_advance": "रू 1,500 Cash Advance",
+      "sample_balance": "रू 814 Owed to Worker",
+      "calendar_tag": "२५ कार्तिक २०८३ (BS)"
+    }
+  },
+  "problem_solution": {
+    "section_tag": "The Agricultural Reality",
+    "title": "Why Paper Notebooks Fail Nepali Farms & How Digital Khetala Solves It",
+    "description": "For generations, Nepali farm owners, tea garden managers, and village labor contractors have recorded khetala in pocket registers. Here is why handwritten registers cause financial loss and how Digital Khetala Hisab-Kitab eliminates wage disputes permanently.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Monsoon Rain, Damaged Notebooks & Device Loss",
+        "problem": "Paper notebooks get soaked in sudden monsoon downpours, smeared with garden mud, or misplaced in fields. If a physical register is lost or a phone is damaged, months of labor attendance and advance records vanish.",
+        "solution": "Local Drift SQLite keeps working instantly without network, while Cloud Firestore automatically synchronizes your household records upon connection, protecting you from lost paper registers or damaged phones.",
+        "tag": "Durability & Continuity"
+      },
+      {
+        "number": "02",
+        "title": "Payday Advance (पेश्की) Disputes",
+        "problem": "Workers routinely take cash advances before Dashain, Tihar, or during family emergencies. When wage settlement arrives weeks later, landowners and workers frequently argue over how much was paid versus how much was earned.",
+        "solution": "Every payment is recorded as whole rupees with timestamp, payment type (regular wage, advance peshki, or recovery), and an unalterable audit log. Running balances update instantly on the worker's ledger.",
+        "tag": "Financial Integrity"
+      },
+      {
+        "number": "03",
+        "title": "Fractional Calculations & Tea Picking by Weight",
+        "problem": "Tea picking is compensated by weight (e.g. 17.5 kg at रू 26.50/kg) while land plowing or weeding is paid by partial days (0.5 day). Manual pocket-calculator math produces rounding discrepancies that create mutual distrust.",
+        "solution": "Exact integer paisa arithmetic (1 NPR = 100 paisa) combined with arbitrary-precision decimal quantity calculations using BigInt half-up rounding. Zero IEEE-754 floating point errors.",
+        "tag": "Mathematical Precision"
+      },
+      {
+        "number": "04",
+        "title": "Verbal Disagreements During Final Wage Settlement",
+        "problem": "When settling season-end wages, reading handwritten scribbles with crossed-out lines creates tension and accusations of unfair accounting between farm owners and laborers.",
+        "solution": "Generate a clean, printable A4 PDF Worker Statement with 25-row pagination, itemized daily tasks, rates, payments, and running balances. Hand a printed copy or share it directly via WhatsApp.",
+        "tag": "Transparency"
+      },
+      {
+        "number": "05",
+        "title": "Gregorian (AD) Calendar Mismatch",
+        "problem": "Standard international accounting and finance apps only support the Gregorian (January-December) calendar. Nepali agricultural cycles, festival wages, and village contracts operate strictly in Bikram Sambat (वि.सं.).",
+        "solution": "Built from the ground up with native Bikram Sambat (BS) date picker, bilingual Nepali month headers (Baisakh to Chaitra), and dual BS/AD date formatting powered by nepali_utils.",
+        "tag": "Cultural Fit"
+      }
+    ]
+  },
+  "features": {
+    "section_tag": "Engineered for Fieldwork",
+    "title": "8 Core Verified Systems Built for Real Agricultural Conditions",
+    "description": "Every feature is implemented in production code, verified with 351 automated tests, and tuned for instant performance on budget Android smartphones in rural Nepal.",
+    "list": [
+      {
+        "id": "offline-sqlite",
+        "icon": "database",
+        "badge": "Local-First Core",
+        "title": "1. Local-First Drift SQLite Engine",
+        "summary": "Every worker, attendance entry, rate override, and cash payment is stored locally on your device in a high-performance SQLite database with full foreign key constraints (`PRAGMA foreign_keys = ON`).",
+        "bullet_points": [
+          "Works reliably in remote fields without cellular network or internet connectivity",
+          "Sub-millisecond read and write latency even with thousands of entries",
+          "Automated Write-Ahead Logging (WAL) preventing data loss during battery drain or sudden phone shutdown",
+          "Immediate local persistence with background queueing for automatic cloud synchronization"
+        ]
+      },
+      {
+        "id": "paisa-arithmetic",
+        "icon": "calculator",
+        "badge": "Financial Accuracy",
+        "title": "2. Exact Integer Paisa Arithmetic",
+        "summary": "In Digital Khetala Hisab-Kitab, money is never stored as floating-point numbers (`double`). Every monetary figure is tracked as integer paisa (1 Nepalese Rupee = 100 paisa).",
+        "bullet_points": [
+          "Eliminates cumulative IEEE-754 precision drift common in standard spreadsheet apps",
+          "Decimal quantities (e.g., 23.75 kg) use BigInt unscaled arithmetic with half-up rounding to the nearest paisa",
+          "Payments and opening balances enforce clean whole-rupee input for fast field operation",
+          "Net balances are dynamically calculated on-the-fly from active records, preventing balance drift"
+        ]
+      },
+      {
+        "id": "bikram-sambat",
+        "icon": "calendar",
+        "badge": "Nepal Localization",
+        "title": "3. Native Bikram Sambat (वि.सं.) Calendar & Ledger",
+        "summary": "Manage your farm ledger according to the official calendar of Nepal. No mental conversion between English and Nepali months.",
+        "bullet_points": [
+          "Custom offline Bikram Sambat date picker covering past, present, and future agricultural seasons",
+          "Worker ledger automatically groups entries chronologically by Nepali year and month (Baisakh through Chaitra)",
+          "Dual BS and AD date display across all transaction lists and preview dialogs",
+          "Bilingual Devanagari numerals and Nepali day/month formatting"
+        ]
+      },
+      {
+        "id": "worker-profiles",
+        "icon": "users",
+        "badge": "Workforce Management",
+        "title": "4. Worker Profiles & Date-Effective Rate Overrides",
+        "summary": "Easily register workers with name, phone number, address, and opening balance carried forward from previous paper registers.",
+        "bullet_points": [
+          "Set universal default wage rates per task (e.g. Tea Picking: रू 28/kg, Plowing: रू 850/day)",
+          "Configure worker-specific rate overrides with custom start and end date validity windows",
+          "Senior workers or specialized equipment operators can receive custom rates automatically on entry",
+          "Soft-archival: deactivate seasonal workers without losing a single historical record"
+        ]
+      },
+      {
+        "id": "immutable-audits",
+        "icon": "history",
+        "badge": "Audit & Protection",
+        "title": "5. Historical Rate Immutability & Audited Voids",
+        "summary": "Financial history must remain honest. If you change a task's default rate tomorrow, past work entries are never recomputed or distorted.",
+        "bullet_points": [
+          "Rate and calculated earnings are stamped permanently at the moment of entry creation",
+          "Silent deletion is strictly prevented: erroneous entries are marked with status `voided` with a mandatory reason",
+          "Every voided record appends an immutable `AuditEvent` capturing complete before-and-after JSON snapshots",
+          "Workers with financial history are permanently protected against accidental deletion"
+        ]
+      },
+      {
+        "id": "pdf-statements",
+        "icon": "file-text",
+        "badge": "Reporting & Proof",
+        "title": "6. Professional A4 PDF Worker Statements",
+        "summary": "Generate clean, official, printable PDF account statements for any worker with a single tap.",
+        "bullet_points": [
+          "Formatted specifically for standard A4 printing and digital sharing via WhatsApp or Viber",
+          "Engineered with 25-row chunking to effortlessly handle multi-month ledgers without memory crashes",
+          "Displays full itemized breakdown: dates (BS/AD), task names, rates, quantities, advances, and running balances",
+          "Includes explicit read-only disclaimer to avoid confusion regarding settlement status"
+        ]
+      },
+      {
+        "id": "daily-reminders",
+        "icon": "bell",
+        "badge": "Field Workflow",
+        "title": "7. Twice-Daily Offline Field Reminders",
+        "summary": "Farm work is exhausting. At the end of a long day in the field, it is easy to postpone bookkeeping until tomorrow—leading to forgotten entries.",
+        "bullet_points": [
+          "Configured for 5:00 PM (end of field shift) and 8:00 PM (post-dinner review)",
+          "100% offline local notifications: triggers reliably without internet or cell service",
+          "Polite reminder messages in Nepali asking to verify today's khetala entries",
+          "Can be easily toggled on or off from the Settings screen"
+        ]
+      },
+      {
+        "id": "cloud-sync",
+        "icon": "cloud",
+        "badge": "Cloud Synchronization",
+        "title": "8. Cloud Synchronization & Multi-Device Continuity",
+        "summary": "Cloud-backed agricultural accounting with Cloud Firestore. Automatically synchronizes pending records when connected, during data mutations, or upon manual trigger, providing seamless multi-device continuity.",
+        "bullet_points": [
+          "Access synchronized household records after signing in to the same account on another phone, reducing the risk of record loss when a phone is lost, damaged, or upgraded",
+          "Automatic background sync triggers on network reconnect, record mutation, or manual sync",
+          "Strict household data isolation under `/households/{householdId}` with end-to-end security rules",
+          "Side-by-side visual conflict resolution at `/conflicts` ensures zero ambiguous record overwrites"
+        ]
+      }
+    ]
+  },
+  "product_showcase": {
+    "section_tag": "Visual Tour",
+    "title": "Thoughtfully Designed for Outdoor Daylight & Non-Technical Users",
+    "description": "High-contrast agricultural green (`#1E6F43`), harvest amber (`#D97706`), large touch targets, and full Devanagari typography designed for effortless use on sunny fields.",
+    "screens": [
+      {
+        "title": "Farm Dashboard",
+        "subtitle": "Everything at a Glance",
+        "desc": "Real-time summary cards displaying active workers, total outstanding wages owed, total cash advances paid out, and rapid one-tap action buttons.",
+        "highlights": ["Active worker counter", "Net balance summary", "Quick Action FABs", "Recent activity feed"]
+      },
+      {
+        "title": "Daily Work Entry",
+        "subtitle": "Fast Field Logging",
+        "desc": "Select worker, pick task, choose attendance type (Full Day, Partial Day, or Manual), enter quantity, and inspect instant live earnings calculation.",
+        "highlights": ["Instant paisa calculation", "Automatic rate override detection", "Bikram Sambat date selector", "Optional note entry"]
+      },
+      {
+        "title": "Date-Wise Nepali Ledger",
+        "subtitle": "Bikram Sambat Grouping",
+        "desc": "Chronological accounting ledger grouped by Nepali month. Inspect every work day, harvested weight, cash advance, and running balance row by row.",
+        "highlights": ["Monthly BS collapse/expand", "Dynamic running balances", "Color-coded advance vs wage badges", "Audited void status"]
+      },
+      {
+        "title": "A4 PDF Statement Export",
+        "subtitle": "Official Proof on Payday",
+        "desc": "Export high-resolution printable PDF statements formatted with 25 rows per page, complete header details, farm name, and itemized accounts.",
+        "highlights": ["25-row page pagination", "Custom date range filter", "Direct WhatsApp share", "DPI 110 crisp rendering"]
+      }
+    ]
+  },
+  "how_it_works": {
+    "section_tag": "Simple Workflow",
+    "title": "4 Steps to Complete Labor Accounting on Your Farm",
+    "description": "Getting started takes less than two minutes. No complex accounting knowledge or training required.",
+    "steps": [
+      {
+        "step_num": "01",
+        "title": "Add Workers & Set Task Rates",
+        "desc": "Create profiles for your regular or seasonal workers. Configure default rates for common tasks like tea plucking (रू/kg), plowing, digging, or daily labor (रू/day)."
+      },
+      {
+        "step_num": "02",
+        "title": "Log Daily Work & Attendance",
+        "desc": "When the field shift ends at 5:00 PM, open the app, pick each worker, and enter their hours or harvested kilograms. Earnings calculate immediately down to the paisa."
+      },
+      {
+        "step_num": "03",
+        "title": "Record Advance Payments (Peshki)",
+        "desc": "Whenever handing cash to a worker before festivals or for medical needs, log the whole rupee amount instantly. The ledger updates the worker's balance on the spot."
+      },
+      {
+        "step_num": "04",
+        "title": "Settle Wages with 1-Tap PDF Statements",
+        "desc": "On settlement day, open the worker's ledger, review their net balance, and generate an official A4 PDF statement. Print it or share it digitally with zero disagreements."
+      }
+    ]
+  },
+  "install_guide": {
+    "section_tag": "Quick Sideloading Guide",
+    "title": "How to Install Digital Khetala Hisab-Kitab on Android",
+    "description": "The application is currently distributed directly as an Android APK. Follow these 5 safe, standard steps to install the app on any Android 6.0+ phone.",
+    "steps": [
+      {
+        "step": "Step 1",
+        "title": "Download the Official APK",
+        "desc": "Tap the 'Download APK' button on this website from your Android smartphone browser to download `Hisab-Kitab-release.apk` (70.2 MB)."
+      },
+      {
+        "step": "Step 2",
+        "title": "Accept the Browser Download Notice",
+        "desc": "Android will display a standard notification: 'File might be harmful. Do you want to download Hisab-Kitab-release.apk anyway?'. Tap 'Download anyway'."
+      },
+      {
+        "step": "Step 3",
+        "title": "Open the Downloaded File",
+        "desc": "Once the download completes, tap the download notification or open your phone's 'Downloads' / 'Files' app and tap `Hisab-Kitab-release.apk`."
+      },
+      {
+        "step": "Step 4",
+        "title": "Allow Installation from Unknown Sources",
+        "desc": "If prompted with 'For your security, your phone is not allowed to install unknown apps from this source', tap 'Settings' and toggle 'Allow from this source' ON, then tap Back."
+      },
+      {
+        "step": "Step 5",
+        "title": "Complete Installation & Open",
+        "desc": "If Google Play Protect displays 'Unrecognized app', tap 'More details' and select 'Install anyway'. Tap 'Open' to begin using Digital Khetala Hisab-Kitab!"
+      }
+    ],
+    "safety_card": {
+      "title": "Safety & Integrity Verified",
+      "sha256_label": "Official APK SHA-256 Checksum",
+      "sha256_hash": "670b6c4787ee67676e30de68e2a7bb533c902fa54f585aed8bc617461e8d00dc",
+      "permissions_title": "Zero Invasive Permissions",
+      "permissions_desc": "Digital Khetala Hisab-Kitab requests only: 1) Notifications (to send optional 5 PM / 8 PM reminder prompts), and 2) Storage access (to save exported PDF statements and JSON backups). It never accesses your camera, contacts, microphone, or GPS location."
+    }
+  },
+  "technical_specs": {
+    "section_tag": "Technical Details",
+    "title": "Specifications & System Architecture",
+    "description": "Full transparency into the software build, minimum requirements, and architectural boundaries.",
+    "items": [
+      { "label": "Application Name", "value": "Digital Khetala Hisab-Kitab (डिजिटल खेताला हिसाब-किताब)" },
+      { "label": "Package Name", "value": "com.khetala.digital_khetala_hisab_kitab" },
+      { "label": "Current Version", "value": "v1.0.0 (Build 1)" },
+      { "label": "Release Date", "value": "November 10, 2026" },
+      { "label": "APK File Size", "value": "70.2 MB (73,613,879 bytes)" },
+      { "label": "Minimum OS Version", "value": "Android 6.0 Marshmallow (API level 23)" },
+      { "label": "Target OS Version", "value": "Android 14 (API level 34)" },
+      { "label": "Architecture", "value": "Flutter 3.38 / Dart 3.10 / Clean Architecture" },
+      { "label": "Database Engine", "value": "Drift 2.23 (SQLite) with WAL mode & Foreign Keys" },
+      { "label": "Cloud Backend", "value": "Firebase Auth & Google Cloud Firestore (Cloud-Backed)" },
+      { "label": "Pricing & Licensing", "value": "100% Free • Zero Advertisements • Cloud-Backed with Offline Functionality" }
+    ]
+  },
+  "faq": {
+    "section_tag": "Got Questions?",
+    "title": "Frequently Asked Questions",
+    "description": "Direct, factual answers regarding offline functionality, financial calculations, data backup, and privacy.",
+    "items": [
+      {
+        "q": "Does Digital Khetala Hisab-Kitab work without an internet connection?",
+        "a": "Yes. Digital Khetala Hisab-Kitab is built with a local-first architecture using Drift SQLite. All core daily features—including logging worker attendance, calculating tea harvest wages by weight, recording cash advances, and calculating running balances—work completely offline in remote fields without cellular signal or Wi-Fi. Pending entries are safely stored locally and synchronized to the cloud when connectivity returns."
+      },
+      {
+        "q": "Is the app completely free to use? Are there hidden fees or subscriptions?",
+        "a": "Yes, Digital Khetala Hisab-Kitab is completely free to download and use. There are no monthly subscriptions, no locked features, no paid tiers, and zero third-party advertisements."
+      },
+      {
+        "q": "What happens if my phone is lost, broken, or upgraded?",
+        "a": "Because Digital Khetala Hisab-Kitab is cloud-backed, your synchronized household records remain safe in Cloud Firestore. Simply sign in to the same account on your new Android phone, and the app will discover and restore your complete farm household ledger. Additionally, you can export offline JSON backup files with SHA-256 checksums at any time for secondary local archiving."
+      },
+      {
+        "q": "How does the app handle fractional work, such as tea picking in kilograms or half-day labor?",
+        "a": "The app natively supports fractional quantities. When recording tea harvesting, you can enter exact weights such as 18.75 kg. For daily labor, you can choose 'Partial Day' and enter 0.5. The engine multiplies the quantity by the applicable rate using integer paisa BigInt arithmetic and rounds half-up to the nearest paisa."
+      },
+      {
+        "q": "What is 'Paisa Accuracy' and why does it matter?",
+        "a": "Standard computer spreadsheets and calculator apps use floating-point numbers (`double`), which accumulate subtle binary rounding errors (e.g. 0.1 + 0.2 = 0.30000000000000004). Over hundreds of daily entries, this creates discrepancies between paper registers and digital totals. Digital Khetala stores all money as exact integers in paisa (1 NPR = 100 paisa), eliminating math errors entirely."
+      },
+      {
+        "q": "Can I use the Nepali Bikram Sambat (वि.सं.) calendar?",
+        "a": "Yes. Digital Khetala Hisab-Kitab features a native offline Bikram Sambat date picker. Your entire worker ledger is chronologically grouped by Nepali agricultural months (Baisakh, Jestha, Ashadh, etc.), matching exactly how farm labor and festival pay cycles operate in Nepal."
+      },
+      {
+        "q": "What if I make a mistake when entering a payment or work entry? Can I delete it?",
+        "a": "To preserve financial honesty and prevent covert tampering, the app uses 'Audited Voids' instead of silent deletion. When you void an entry, you must supply a reason (e.g. 'Duplicate entry'). The record is marked void, its amount is immediately removed from the worker's balance, and a permanent before-and-after snapshot is recorded in the system audit log."
+      },
+      {
+        "q": "Can multiple family members access farm accounts across different phones?",
+        "a": "Yes. When family members sign in to the same household account across multiple devices, Cloud Firestore keeps records continuously synchronized. Daily field entries logged on one phone sync seamlessly to others upon connection. If a record is edited on two devices at once, the built-in conflict resolution screen at `/conflicts` lets you review changes side-by-side."
+      },
+      {
+        "q": "How can I back up my data without using the internet?",
+        "a": "In the Settings screen, you can tap 'Export Backup' at any time. The app generates an encrypted, human-readable JSON backup file stamped with a SHA-256 checksum and saves it to your phone's storage. You can transfer this file to an SD card, a computer, or send it to your email."
+      },
+      {
+        "q": "Is my farm's financial data private and secure?",
+        "a": "Yes, absolutely. Your farm accounting records are strictly partitioned under your unique household account in Cloud Firestore (`/households/{householdId}/*`). Firestore security rules ensure that only authenticated members of your household can access your records. We never sell, monetize, track, or share your worker wages or crop yields with advertisers or third parties."
+      },
+      {
+        "q": "How do I share a wage statement with a worker?",
+        "a": "Open the worker's profile, select 'Generate Statement (PDF)', choose the date range (e.g. this month or all-time), and preview the statement. You can tap 'Share' to send the PDF directly to the worker via WhatsApp or Bluetooth, or connect to any wireless printer for physical paper copies."
+      },
+      {
+        "q": "Why does Android warn that the file 'might be harmful' when I download the APK?",
+        "a": "Android displays this generic security warning for any application downloaded directly from a web browser instead of the Google Play Store. It is a standard operating system notice. Our APK is 100% clean, built with official Android SDKs, and contains no malicious code or trackers."
+      },
+      {
+        "q": "Can I set different daily wage rates for different workers?",
+        "a": "Yes. While each task has a default rate (e.g. Daily Labor at रू 800), you can configure 'Rate Overrides' for specific workers. For instance, a tractor driver or senior worker can be assigned रू 1,000/day, which will automatically apply whenever you record work for them."
+      },
+      {
+        "q": "If I update a crop rate midway through the season, will past records change?",
+        "a": "No. The application enforces historical rate immutability. When you record a work entry, the applicable rate and computed earnings are stamped permanently onto that entry. Updating default rates tomorrow will only apply to future work entries."
+      }
+    ]
+  },
+  "about": {
+    "section_tag": "Origin & Purpose",
+    "title": "Created for the Hardworking Agricultural Community of Nepal",
+    "subtitle": "Born in the tea-growing heartland of Eastern Nepal to protect farm owners and daily laborers from record loss and bitter wage disputes.",
+    "story_p1": "In Nepal's agricultural belt—from the emerald tea gardens of Jhapa, Ilam, and Panchthar to the terraced potato and maize fields of the mid-hills—farm labor management has relied on the same fragile tool for over half a century: pocket-sized paper registers (खता/कापी).",
+    "story_p2": "Every monsoon season brings the same recurring hardship. Heavy downpours soak notebooks in the field. Pages smudge with mud or tear apart during transport. Worse still, cash advances (पेश्की) handed to workers before major festivals like Dashain and Tihar are often jotted down on loose corners. When settlement day arrives months later, misplaced notes spark painful disagreements between families who have worked together for generations.",
+    "story_p3": "Digital Khetala Hisab-Kitab was engineered by Saurav Karki, a software engineer born and raised in Birtamode, Jhapa. Having witnessed these exact struggles firsthand among local tea growers and agricultural families, Saurav set out to build a tool that truly respects the realities of rural Nepal.",
+    "story_p4": "This is not an overcomplicated Silicon Valley SaaS app that requires fast 5G data or credit cards. It is an honest, cloud-backed agricultural ledger with offline functionality: fully operational in remote fields without cellular coverage, calculating to the exact paisa, speaking fluent Nepali in Bikram Sambat (वि.सं.), and keeping family farm records secure across devices.",
+    "developer_card": {
+      "name": "Saurav Karki",
+      "role": "Creator & Lead Software Engineer",
+      "location": "Birtamode, Jhapa, Koshi Province, Nepal",
+      "email": "sauravkarki279@gmail.com",
+      "github": "https://github.com/saurav-karki1",
+      "portfolio": "https://www.sauravkarki1.com.np/"
+    }
+  },
+  "contact": {
+    "section_tag": "Get in Touch",
+    "title": "Developer Contact & Agricultural Feedback",
+    "subtitle": "Have feedback, need assistance setting up the app, or want to suggest new features for Nepali farming? Reach out directly.",
+    "info": {
+      "developer": "Saurav Karki",
+      "address": "Birtamode, Jhapa, Koshi Province, Nepal",
+      "email": "sauravkarki279@gmail.com",
+      "github_repo": "https://github.com/saurav-karki1/portfolio-website"
+    },
+    "form": {
+      "name_label": "Your Name",
+      "name_placeholder": "e.g. Binod Sharma",
+      "email_label": "Your Email or Phone",
+      "email_placeholder": "e.g. binod@gmail.com or 9800000000",
+      "farm_label": "Farm Type / Location",
+      "farm_placeholder": "e.g. Tea garden in Ilam / Potato farm in Jhapa",
+      "message_label": "Message or Feedback",
+      "message_placeholder": "Describe your experience, question, or feature suggestion...",
+      "submit_btn": "Send Message"
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy for Digital Khetala Hisab-Kitab",
+    "effective_date": "November 10, 2026",
+    "version": "1.0.0",
+    "intro": "Digital Khetala Hisab-Kitab is developed by Saurav Karki as a cloud-backed agricultural utility with offline functionality. This Privacy Policy discloses our strict principles regarding the collection, storage, and handling of your farm financial data.",
+    "sections": [
+      {
+        "title": "1. Local-First & Cloud-Backed Architecture",
+        "content": "Digital Khetala Hisab-Kitab is designed to operate seamlessly in remote fields without cellular network. All information you enter—including worker names, telephone numbers, addresses, daily labor entries, harvested weights, wage rates, advance payments, and notes—is stored first on your device in an encrypted SQLite database via Drift ORM. When internet connectivity is available, records synchronize with Google Cloud Firestore under your private household account."
+      },
+      {
+        "title": "2. Cloud Synchronization & Multi-Device Continuity",
+        "content": "When signed in with Google Sign-In or Email authentication, your records synchronize with Google Cloud Firestore under a strictly isolated household path (`/households/{householdId}/*`). Synchronization enables multi-device continuity within your own household, allowing you to access records if a phone is lost, broken, or upgraded. Your records are protected by Firestore security rules that strictly prevent any unauthorized user from reading or modifying your data."
+      },
+      {
+        "title": "3. Data We Do NOT Collect",
+        "content": "We believe farm financial records are deeply private. We do NOT: 1) Sell, rent, or monetize your personal or financial data to advertisers, lenders, or data brokers; 2) Display third-party commercial advertisements; 3) Track your physical GPS location; 4) Inspect, aggregate, or profile individual crop yields or wage rates."
+      },
+      {
+        "title": "4. Device Permissions Requested",
+        "content": "The application requests only two standard Android permissions: 1) `POST_NOTIFICATIONS`: To deliver your chosen twice-daily reminder prompts at 5:00 PM and 8:00 PM. These notifications are scheduled locally on your device without any external push notification server. 2) Storage Access: To allow your phone to save exported A4 PDF statements and encrypted JSON backup files to your Downloads or Documents directory."
+      },
+      {
+        "title": "5. Data Retention & Deletion",
+        "content": "You retain 100% control over your data. You can delete individual records via audited voiding, clear your local database in the app settings, or export your entire history as a JSON backup at any time. If you use cloud sync and wish to permanently delete your cloud household account, you may submit a request to `sauravkarki279@gmail.com` and all associated Firestore records will be permanently purged within 7 business days."
+      },
+      {
+        "title": "6. Contact Information",
+        "content": "If you have questions regarding this Privacy Policy or data security practices, contact: Saurav Karki, Birtamode, Jhapa, Koshi Province, Nepal. Email: sauravkarki279@gmail.com."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terms of Service for Digital Khetala Hisab-Kitab",
+    "effective_date": "November 10, 2026",
+    "version": "1.0.0",
+    "intro": "These Terms of Service govern your use of the Digital Khetala Hisab-Kitab mobile application and official website. By downloading, installing, or using the software, you agree to these terms.",
+    "sections": [
+      {
+        "title": "1. License and Permitted Use",
+        "content": "Digital Khetala Hisab-Kitab is provided free of charge as an agricultural bookkeeping utility for farmers, agricultural businesses, and labor managers. You are granted a personal, non-exclusive, revocable license to use the application for farm management and personal bookkeeping."
+      },
+      {
+        "title": "2. User Responsibilities & Data Backups",
+        "content": "Because Digital Khetala Hisab-Kitab operates primarily as an offline-first tool storing data on your local device hardware, you are solely responsible for safeguarding your device and performing periodic backups using the built-in 'Export Backup' feature. We are not liable for data loss resulting from physical phone damage, device theft, unauthorized operating system resets, or unbacked-up sideloading issues."
+      },
+      {
+        "title": "3. No Formal Financial or Legal Advice",
+        "content": "Digital Khetala Hisab-Kitab is a calculation and recording utility. It does not provide formal tax, accounting, or legal counsel. Wage agreements, advance payments (peshki), and labor contracts are governed by mutual consent between landowners and workers in accordance with the laws of Nepal."
+      },
+      {
+        "title": "4. Disclaimer of Warranties",
+        "content": "The application is provided 'as is' and 'as available', without warranties of any kind, either express or implied. While the software has been thoroughly tested with 351 automated test suites and exact integer paisa arithmetic, the developer does not guarantee that the software will be uninterrupted or error-free across all third-party Android modifications."
+      },
+      {
+        "title": "5. Governing Law",
+        "content": "These Terms of Service shall be governed by and construed in accordance with the laws of Nepal. Any legal disputes arising under these terms shall be subject to the exclusive jurisdiction of the courts of Jhapa District, Nepal."
+      }
+    ]
+  },
+  "footer": {
+    "app_name": "Digital Khetala Hisab-Kitab",
+    "tagline": "Cloud-Backed Agricultural Accounting with Offline Functionality",
+    "built_with": "Built with pride for Nepali farmers and agricultural workers.",
+    "creator": "Crafted by Saurav Karki • Birtamode, Jhapa, Nepal",
+    "links": {
+      "home": "Home",
+      "features": "Features",
+      "how_it_works": "How It Works",
+      "faq": "FAQ",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "contact": "Contact Developer"
+    },
+    "copyright": "© 2026 Digital Khetala Hisab-Kitab. All rights reserved."
+  }
+}

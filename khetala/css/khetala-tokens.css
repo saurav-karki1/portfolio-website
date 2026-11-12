@@ -1,0 +1,194 @@
+/* Hallmark · shape: settled · genre: modern-minimal · theme: Khetala Ledger (bespoke) · job: try · draw: manual
+ * hero: settled · nav: edge-aligned · footer: colophon · imagery: the product · signature: authentic ruled agricultural ledger
+ * axes: light/grotesk-sans/chromatic-green · posture: committed · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 · weakest: S, anchored strictly in verified Nepali agricultural accounting tokens (रू currency coin, BS calendar, tea garden emerald) rather than generic farming tropes */
+
+:root {
+  color-scheme: light;
+
+  /* Spacing Scale (Hallmark strict scale - no raw lengths) */
+  --space-3xs: 2px;
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+  --space-4xl: 144px;
+
+  /* Typography Scale */
+  --text-xs: 0.8125rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5625rem;
+  --text-2xl: 1.953rem;
+  --text-3xl: 2.441rem;
+  --text-lead: clamp(1.125rem, 0.35vw + 1rem, 1.375rem);
+  --text-title: clamp(1.25rem, 0.75vw + 0.875rem, 1.625rem);
+  --text-section: clamp(2rem, 2.5vw + 1rem, 3.5rem);
+  --text-display-s: clamp(2.25rem, 4vw + 0.5rem, 3.75rem);
+  --text-display: clamp(2.75rem, 5vw + 1rem, 5.25rem);
+
+  /* Fonts (Display, Body, Outlier - exactly 3 families to satisfy Gate 37) */
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, sans-serif;
+  --font-body: "Noto Sans Devanagari", ui-sans-serif, system-ui, sans-serif;
+  --font-outlier: "JetBrains Mono", ui-monospace, monospace;
+  --tracking-display: -0.025em;
+  --display-weight: 700;
+  --body-weight: 400;
+  --title-weight: 600;
+
+  /* Color Palette - OKLCH (Anchored in Flutter app's primary green #1E6F43 and harvest amber #D97706) */
+  --color-paper: oklch(97.5% 0.012 85);
+  --color-paper-2: oklch(99.2% 0.006 85);
+  --color-paper-3: oklch(94% 0.018 85);
+  --color-ink: oklch(19% 0.016 152);
+  --color-ink-2: oklch(30% 0.02 152);
+  --color-muted: oklch(46% 0.025 152);
+  --color-rule: oklch(88% 0.015 85);
+  --color-rule-strong: oklch(48% 0.12 152);
+
+  /* Primary Brand (Deep Agricultural Green - #1E6F43) */
+  --color-primary: oklch(48% 0.12 152);
+  --color-primary-hover: oklch(42% 0.12 152);
+  --color-primary-ink: oklch(98% 0.005 85);
+  --color-primary-soft: oklch(94% 0.035 152);
+  --color-primary-border: oklch(38% 0.10 152);
+
+  /* Accent (Golden Harvest Amber - #D97706) */
+  --color-accent: oklch(65% 0.17 65);
+  --color-accent-hover: oklch(60% 0.17 65);
+  --color-accent-ink: oklch(18% 0.02 65);
+  --color-accent-soft: oklch(93% 0.05 65);
+  --color-accent-border: oklch(72% 0.12 65);
+  --color-focus: oklch(48% 0.12 152);
+
+  /* Semantic Feedback & Ledger States */
+  --color-success: oklch(50% 0.12 150);
+  --color-success-soft: oklch(94% 0.04 150);
+  --color-success-border: oklch(68% 0.09 150);
+  --color-error: oklch(52% 0.19 27);
+  --color-error-soft: oklch(94% 0.05 27);
+  --color-error-border: oklch(70% 0.12 27);
+
+  /* Traditional Nepali Ledger Artifact Tokens */
+  --color-ledger-spine: oklch(35% 0.09 152);
+  --color-ledger-stitch: oklch(75% 0.08 150);
+  --color-grid: oklch(91% 0.014 85);
+  --color-sheet: oklch(99.4% 0.004 85);
+
+  /* Layout & Rhythm */
+  --container: 1440px;
+  --gutter: 64px;
+  --gap-columns: 32px;
+  --section-gap-s: 120px;
+  --section-gap: 144px;
+  --section-gap-l: 176px;
+
+  /* Elevation & Borders */
+  --radius-card: 12px;
+  --radius-inner: 8px;
+  --radius-pill: 999px;
+  --radius-entry: 10px;
+  --radius-device: 40px;
+  --radius-device-screen: 28px;
+  --rule-hair: 1px;
+  --rule-thick: 2px;
+  --shadow-card: 0 1px 3px oklch(19% 0.016 152 / 0.06), 0 8px 20px -8px oklch(19% 0.016 152 / 0.12);
+  --shadow-lift: 0 1px 2px oklch(19% 0.016 152 / 0.08), 0 16px 32px -12px oklch(19% 0.016 152 / 0.18);
+  --shadow-btn-primary: 0 1px 2px oklch(19% 0.016 152 / 0.12), inset 0 1px 0 oklch(99.4% 0.004 85 / 0.25);
+  --shadow-btn-secondary: 0 1px 2px oklch(19% 0.016 152 / 0.05);
+
+  /* Smartphone Device Chassis & 3D Perspective Tokens */
+  --perspective-stage: 1200px;
+  --tilt-x: 3.5deg;
+  --tilt-y: -6.5deg;
+  --tilt-z: 0.8deg;
+
+  --device-width: 304px;
+  --radius-device-outer: 38px;
+  --radius-device-screen: 28px;
+
+  --color-device-body: oklch(14% 0.012 152);
+  --color-device-bezel: oklch(10% 0.008 152);
+  --color-device-edge: oklch(98% 0.005 85 / 0.16);
+  --color-device-speaker: oklch(24% 0.012 152);
+  --color-device-rim: oklch(28% 0.018 152);
+  --color-device-sensor: oklch(8% 0.005 152);
+  --color-device-sensor-core: oklch(24% 0.04 220);
+  --color-device-sensor-glint: oklch(50% 0.12 152 / 0.45);
+  --color-device-glare: oklch(98% 0.005 85 / 0.12);
+  --color-device-glare-soft: oklch(98% 0.005 85 / 0.03);
+  --color-device-specular: oklch(98% 0.005 85 / 0.36);
+  --color-device-specular-soft: oklch(98% 0.005 85 / 0.08);
+
+  --shadow-3d-device:
+    inset 0 0 0 1px oklch(98% 0.005 85 / 0.16),
+    inset 0 1px 0 oklch(98% 0.005 85 / 0.32),
+    inset 0 -1px 0 oklch(0% 0 0 / 0.6),
+    0 4px 8px -2px oklch(19% 0.016 152 / 0.14),
+    0 16px 32px -4px oklch(19% 0.016 152 / 0.20),
+    0 32px 64px -8px oklch(19% 0.016 152 / 0.26);
+
+  --shadow-3d-device-hover:
+    inset 0 0 0 1px oklch(98% 0.005 85 / 0.20),
+    inset 0 1px 0 oklch(98% 0.005 85 / 0.36),
+    inset 0 -1px 0 oklch(0% 0 0 / 0.6),
+    0 8px 16px -2px oklch(19% 0.016 152 / 0.16),
+    0 24px 44px -4px oklch(19% 0.016 152 / 0.24),
+    0 40px 72px -8px oklch(19% 0.016 152 / 0.30);
+
+  --shadow-3d-device-mobile:
+    inset 0 0 0 1px oklch(98% 0.005 85 / 0.14),
+    0 8px 16px -2px oklch(19% 0.016 152 / 0.16),
+    0 20px 36px -6px oklch(19% 0.016 152 / 0.22);
+
+  --shadow-speaker: inset 0 1px 1px oklch(0% 0 0 / 0.9), 0 1px 0 oklch(98% 0.005 85 / 0.12);
+  --shadow-camera: inset 0 1px 2px oklch(0% 0 0 / 0.95), 0 0 0 1px oklch(28% 0.01 152);
+  --shadow-screen: inset 0 0 0 1px oklch(0% 0 0 / 0.7);
+
+  --shadow-3d-floating:
+    0 2px 6px oklch(19% 0.016 152 / 0.06),
+    0 12px 24px -6px oklch(19% 0.016 152 / 0.14),
+    0 24px 36px -12px oklch(19% 0.016 152 / 0.10);
+
+  /* Motion & Timing */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+
+  /* Layering Z-Indices */
+  --z-base: 1;
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-sticky-nav: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+}
+
+@media (max-width: 60rem) {
+  :root {
+    --gutter: 24px;
+    --section-gap-s: 80px;
+    --section-gap: 96px;
+    --section-gap-l: 120px;
+  }
+}
+
+@media (max-width: 40rem) {
+  :root {
+    --gutter: 16px;
+    --section-gap-s: 56px;
+    --section-gap: 72px;
+    --section-gap-l: 96px;
+    --gap-columns: 16px;
+  }
+}

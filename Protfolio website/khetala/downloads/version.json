@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "app_name": "Digital Khetala Hisab-Kitab",
+  "app_name_ne": "डिजिटल खेताला हिसाब-किताब",
+  "package_name": "com.khetala.digital_khetala_hisab_kitab",
+  "latest_version": "1.0.0",
+  "build_number": 1,
+  "version_code": 1,
+  "release_date": "2026-11-11",
+  "release_date_bs": "२०८३-०७-२६",
+  "apk_filename": "Hisab-Kitab-release.apk",
+  "file_size_bytes": 73613879,
+  "file_size_mb": 70.20,
+  "file_size_formatted": "70.20 MB",
+  "min_android_sdk": 21,
+  "min_android_version": "Android 5.0 (Lollipop) or newer",
+  "min_android_version_ne": "एन्ड्रोइड ५.० (ललिपप) वा माथि",
+  "target_android_sdk": 34,
+  "target_android_version": "Android 14 (API 34)",
+  "supported_architectures": [
+    "arm64-v8a",
+    "armeabi-v7a",
+    "x86_64"
+  ],
+  "download_url": "https://github.com/saurav-karki1/portfolio-website/releases/download/v1.0.0/Hisab-Kitab-release.apk",
+  "github_release_url": "https://github.com/saurav-karki1/portfolio-website/releases/tag/v1.0.0",
+  "direct_download_qr": "images/qr-direct-apk.svg",
+  "page_qr": "images/qr-download.svg",
+  "apk_sha256": "670B6C4787EE67676E30DE68E2A7BB533C902FA54F585AED8BC617461E8D00DC",
+  "apk_sha256_lower": "670b6c4787ee67676e30de68e2a7bb533c902fa54f585aed8bc617461e8d00dc",
+  "apk_md5": "D301452B8298B74BCED97256046839C4",
+  "apk_sha1": "F4DA57E16382753B942763A31ABEF1F625EE05F8",
+  "force_update": false,
+  "permissions_declared": {
+    "INTERNET": "Optional Firebase authentication and cloud database backup sync.",
+    "POST_NOTIFICATIONS": "Daily reminders at 5:00 PM and 8:00 PM to log daily field labor.",
+    "RECEIVE_BOOT_COMPLETED": "Reschedules daily reminder alarms when device restarts.",
+    "VIBRATE": "Haptic feedback for shift reminder notifications.",
+    "SCHEDULE_EXACT_ALARM": "Precise alarm triggers for end-of-workday labor ledger logging."
+  },
+  "permissions_guarantees": {
+    "no_camera_access": true,
+    "no_microphone_access": true,
+    "no_location_tracking": true,
+    "no_contacts_reading": true,
+    "no_phone_calls_or_sms": true,
+    "no_ad_trackers": true
+  },
+  "changelog": {
+    "en": [
+      "Initial production release of Digital Khetala Hisab-Kitab.",
+      "100% offline Drift SQLite storage with full foreign-key enforcement.",
+      "Exact integer paisa arithmetic (1 NPR = 100 paisa) eliminating floating-point rounding errors.",
+      "Dual Bikram Sambat (वि.सं.) and Gregorian (AD) calendar support with Nepali date picker.",
+      "Worker profile management, archival, and date-effective custom rate overrides.",
+      "Audited voids and corrections with immutable before-and-after change log.",
+      "Read-only A4 PDF worker statements with 25-row chunking for large ledgers.",
+      "Twice-daily reminders at 5:00 PM and 8:00 PM for timely field labor logging.",
+      "Optional same-account Cloud Firestore sync with side-by-side conflict resolution.",
+      "Offline database backup and restore with SHA-256 integrity verification."
+    ],
+    "ne": [
+      "डिजिटल खेताला हिसाब-किताबको पहिलो आधिकारिक सार्वजनिक संस्करण।",
+      "इन्टरनेट बिना १००% अफलाइन चल्ने ड्रिफ्ट एसक्यूलाइट (Drift SQLite) डाटाबेस।",
+      "पैसा स्तरको गणितीय शुद्धता (१ रुपैयाँ = १०० पैसा) जसले दशमलवको गडबडी हटाउँछ।",
+      "नेपाली वि.सं. (Bikram Sambat) र ई.सं. (AD) दुवै पात्रो तथा मिति छनोटको पूर्ण सुविधा।",
+      "कामदार विवरण, संग्रह (Archive) र निश्चित अवधिका लागि विशेष दर तोक्ने व्यवस्था।",
+      "प्रमाणीकृत प्रविष्टि रद्द (Audited Voids) र पारदर्शी अडिट लग प्रणाली।",
+      "लामो अवधिको हिसाबका लागि २५ हरफ प्रति पृष्ठको ए-फोर (A4) कामदार हिसाब विवरण PDF।",
+      "दैनिक साँझ ५:०० र रात ८:०० बजे हिसाब भर्न सम्झाउने स्थानीय नोटिफिकेसन।",
+      "एउटै खातामा आधारित ऐच्छिक क्लाउड सिङ्क र दुईतर्फी विवाद समाधान।",
+      "SHA-256 चेकसम प्रमाणीकरण सहितको अफलाइन JSON ब्याकअप र पुनर्स्थापना।"
+    ]
+  }
+}

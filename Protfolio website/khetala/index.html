@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Khetala Hisab-Kitab | Manage Farm Workers and Payments Easily</title>
+  <meta name="description" content="Manage farm workers, tea harvesting by weight, cash advances (peshki), and wage payments easily. Cloud-backed agricultural accounting with offline functionality for Nepal.">
+  <meta name="keywords" content="khetala hisab kitab, manage farm workers, nepali agricultural accounting, tea picking calculation, bikram sambat ledger, offline farm bookkeeping, peshki hisab, jhapa ilam agriculture app">
+  <meta name="author" content="Saurav Karki">
+  <link rel="canonical" href="https://www.sauravkarki1.com.np/khetala/">
+  <link rel="alternate" hreflang="en" href="https://www.sauravkarki1.com.np/khetala/">
+  <link rel="alternate" hreflang="ne" href="https://www.sauravkarki1.com.np/khetala/np/">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Digital Khetala Hisab-Kitab – Manage Farm Workers and Payments Easily">
+  <meta property="og:description" content="Keep track of daily farm work, worker payments, cash advances, and outstanding balances in one place. Cloud-backed with offline functionality.">
+  <meta property="og:image" content="images/app_logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.sauravkarki1.com.np/khetala/">
+  <meta property="og:locale" content="en">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Digital Khetala Hisab-Kitab">
+  <meta name="twitter:description" content="Cloud-backed agricultural accounting with offline functionality for Nepal. Bikram Sambat calendar, exact paisa arithmetic, PDF statements.">
+  <meta name="twitter:image" content="images/app_logo.png">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Devanagari:wght@400;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/khetala-style.css">
+  <link rel="icon" type="image/png" href="images/app_icon.png">
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Digital Khetala Hisab-Kitab",
+    "operatingSystem": "Android 5.0+",
+    "applicationCategory": "BusinessApplication",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "NPR"},
+    "downloadUrl": "https://github.com/saurav-karki1/portfolio-website/releases/download/v1.0.0/Hisab-Kitab-release.apk",
+    "softwareVersion": "1.0.0",
+    "fileSize": "70.2 MB",
+    "author": {"@type": "Person", "name": "Saurav Karki", "address": {"@type": "PostalAddress", "addressLocality": "Birtamode", "addressRegion": "Jhapa", "addressCountry": "NP"}},
+    "description": "Offline-first agricultural labor accounting for Nepali farmers and tea growers."
+  }
+  </script>
+  <script src="js/khetala-i18n.js"></script>
+</head>
+<body>
+
+  <!-- ─── NAVIGATION ─── -->
+  <header>
+    <nav class="kh-nav" aria-label="Main navigation">
+      <div class="kh-nav__inner container">
+        <a class="kh-nav__brand" href="index.html" aria-label="Digital Khetala home">
+          <img class="kh-nav__logo" src="images/app_icon.png" alt="Digital Khetala logo" width="36" height="36">
+          <span class="kh-nav__wordmark">
+            <span class="kh-nav__wordmark-title">Digital Khetala</span>
+            <span class="kh-nav__wordmark-sub">Hisab-Kitab</span>
+          </span>
+        </a>
+        <div class="kh-nav__links" role="list">
+          <a href="features.html" role="listitem">Features</a>
+          <a href="download.html" role="listitem">Download</a>
+          <a href="about.html" role="listitem">About</a>
+          <a href="faq.html" role="listitem">FAQ</a>
+          <a href="contact.html" role="listitem">Contact</a>
+        </div>
+        <div class="kh-nav__actions">
+          <a class="kh-lang-switch" href="np/" data-lang-switch="ne" aria-label="Switch to Nepali">नेपाली</a>
+          <a class="kh-btn kh-btn--primary" href="download.html">Download APK</a>
+        </div>
+        <button class="kh-nav__hamburger" data-hamburger aria-label="Open navigation menu" aria-expanded="false" aria-controls="kh-nav-drawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav id="kh-nav-drawer" class="kh-nav__drawer" aria-hidden="true" aria-label="Mobile navigation">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="download.html">Download</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <a href="np/" data-lang-switch="ne">नेपाली</a>
+      </nav>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ─── HERO ─── -->
+    <section class="kh-hero">
+      <div class="kh-hero__grid container">
+        <div class="kh-hero__copy">
+          <span class="kh-hero__badge">
+            <span class="kh-hero__badge-dot"></span>
+            Cloud-Backed Agricultural Accounting with Offline Functionality
+          </span>
+          <h1 class="kh-hero__headline">Manage Farm Workers and Payments Easily.</h1>
+          <p class="kh-hero__subtitle">Record daily farm work, worker payments, and advances in one place.</p>
+          <div class="kh-hero__actions">
+            <a class="kh-btn kh-btn--primary" href="download.html">Download Free APK (v1.0.0)</a>
+            <a class="kh-btn kh-btn--secondary" href="features.html">Explore Features</a>
+          </div>
+          <p class="kh-hero__meta"><span class="kh-meta-pill">Free Android App</span> <span class="kh-meta-pill">v1.0.0</span> <span class="kh-meta-pill">70.2 MB</span> <span class="kh-meta-pill">No Ads</span></p>
+        </div>
+
+        <div class="kh-hero__visual">
+          <div class="kh-device-wrap">
+            <!-- Floating Highlight Chips -->
+            <div class="kh-chip-float kh-chip-float--top" role="status">
+              <span class="kh-chip-float__icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+              </span>
+              <span>Cloud Synchronized</span>
+            </div>
+
+            <div class="kh-chip-float kh-chip-float--bottom" role="status">
+              <span class="kh-chip-float__badge" aria-hidden="true">रू</span>
+              <span>Integer Paisa Math</span>
+            </div>
+
+            <!-- Realistic Smartphone Frame -->
+            <div class="kh-device-phone">
+              <div class="kh-device-phone__speaker" aria-hidden="true"></div>
+              <div class="kh-device-phone__screen">
+                <div class="kh-device-phone__camera" aria-hidden="true"></div>
+                <img
+                  class="kh-device-phone__img"
+                  src="images/screenshot-dashboard.jpg"
+                  alt="Digital Khetala Hisab Kitab Android dashboard displaying active worker counts, cash advance totals, and recent farm work entries"
+                  width="468"
+                  height="1024"
+                  loading="eager"
+                  decoding="async"
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="kh-trust-row container">
+        <div class="kh-trust-item">
+          <div class="kh-trust-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <strong class="kh-trust-item__title">Local-First Storage</strong>
+          <span class="kh-trust-item__desc">Drift SQLite records work in remote fields without cellular coverage</span>
+        </div>
+        <div class="kh-trust-item">
+          <div class="kh-trust-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><line x1="8" y1="10" x2="8" y2="10.01"/><line x1="12" y1="10" x2="12" y2="10.01"/><line x1="16" y1="10" x2="16" y2="10.01"/><line x1="8" y1="14" x2="8" y2="14.01"/><line x1="12" y1="14" x2="12" y2="14.01"/><line x1="8" y1="18" x2="8" y2="18.01"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
+          </div>
+          <strong class="kh-trust-item__title">Exact Paisa Math</strong>
+          <span class="kh-trust-item__desc">Integer arithmetic, zero rounding errors</span>
+        </div>
+        <div class="kh-trust-item">
+          <div class="kh-trust-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <strong class="kh-trust-item__title">Bikram Sambat</strong>
+          <span class="kh-trust-item__desc">Native Nepali calendar, Baisakh to Chaitra</span>
+        </div>
+        <div class="kh-trust-item">
+          <div class="kh-trust-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          </div>
+          <strong class="kh-trust-item__title">Cloud Sync &amp; Privacy</strong>
+          <span class="kh-trust-item__desc">Secure Firestore sync with private household access</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── PROBLEM vs SOLUTION ─── -->
+    <section class="kh-section kh-section--band" id="problem">
+      <div class="container">
+        <div class="kh-section__header">
+          <span class="kh-section__eyebrow">The agricultural reality</span>
+          <h2>Why Paper Notebooks Fail</h2>
+        </div>
+        <div class="kh-problem-solution">
+          <div class="kh-problem">
+            <h3>The Paper Khata Problem</h3>
+            <ul>
+              <li>Rain and humidity destroy months of picking records</li>
+              <li>Illegible handwriting causes wage disputes</li>
+              <li>No running totals: settlement day is guesswork</li>
+              <li>Lost notebooks mean lost proof of payment</li>
+              <li>Multiple workers across scattered entries</li>
+            </ul>
+          </div>
+          <div class="kh-solution">
+            <h3>The Digital Khetala Solution</h3>
+            <ul>
+              <li>Safe: records persist locally offline and sync to the cloud</li>
+              <li>Every entry is clearly typed with exact amounts</li>
+              <li>Running balances updated instantly, per worker</li>
+              <li>Export and backup your full history at any time</li>
+              <li>Dedicated profile and ledger for every worker</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── APP PREVIEW / WORKER LEDGER SHOWCASE ─── -->
+    <section class="kh-section kh-showcase" id="showcase">
+      <div class="container">
+        <div class="kh-showcase__grid">
+          <div class="kh-showcase__phone-col">
+            <div class="kh-device-wrap">
+              <div class="kh-chip-float kh-chip-float--top" role="status">
+                <span class="kh-chip-float__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <span>Settled (साफ) Status</span>
+              </div>
+
+              <div class="kh-chip-float kh-chip-float--bottom" role="status">
+                <span class="kh-chip-float__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>
+                </span>
+                <span>Statement PDF Export</span>
+              </div>
+
+              <div class="kh-device-phone kh-device-phone--showcase">
+                <div class="kh-device-phone__speaker" aria-hidden="true"></div>
+                <div class="kh-device-phone__screen">
+                  <div class="kh-device-phone__camera" aria-hidden="true"></div>
+                  <img
+                    class="kh-device-phone__img"
+                    src="images/screenshot-worker-ledger.jpg"
+                    alt="Digital Khetala Hisab Kitab worker ledger screen for Ram showing zero balance settled status, opening balance, total earnings, and statement PDF export"
+                    width="468"
+                    height="1024"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="kh-showcase__content">
+            <div class="kh-showcase__header">
+              <span class="kh-section__eyebrow">Individual ledger system</span>
+              <h2>Transparent Accounting for Every Farm Worker</h2>
+              <p class="lead">Inside the worker ledger screen. Every agricultural laborer receives an independent ledger account tracking earnings, advances, and settlements with mathematical certainty.</p>
+            </div>
+
+            <div class="kh-showcase__cards">
+              <div class="kh-showcase__item">
+                <div class="kh-showcase__item-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                </div>
+                <div class="kh-showcase__item-body">
+                  <h3>Worker Profiles &amp; Settled Status</h3>
+                  <p>Dedicated accounts for each laborer. The instant settled badge (<span class="num">Settled / साफ</span>) confirms zero outstanding wage debt at the end of each harvest or payment cycle.</p>
+                </div>
+              </div>
+
+              <div class="kh-showcase__item">
+                <div class="kh-showcase__item-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/></svg>
+                </div>
+                <div class="kh-showcase__item-body">
+                  <h3>Running Ledger &amp; Opening Balances</h3>
+                  <p>Three-way balance breakdown: Opening Balance (खाता शुरुवात), Total Earnings (जम्मा कमाई), and Total Payments/Advances (जम्मा भुक्तानी) computed with exact integer paisa arithmetic.</p>
+                </div>
+              </div>
+
+              <div class="kh-showcase__item">
+                <div class="kh-showcase__item-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>
+                </div>
+                <div class="kh-showcase__item-body">
+                  <h3>On-Device Statement PDF Export</h3>
+                  <p>Generate verifiable A4 wage statements directly on the phone. Includes 25-row chunking, Bikram Sambat date stamps, and one-tap sharing to WhatsApp or local printers.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── FEATURES GRID ─── -->
+    <section class="kh-section" id="features">
+      <div class="container">
+        <div class="kh-section__header">
+          <span class="kh-section__eyebrow">Core capabilities</span>
+          <h2>Built for Nepali Farms</h2>
+          <p class="lead">Every feature designed around the real workflow of tea garden managers, potato farm owners, and agricultural labor contractors in eastern Nepal.</p>
+        </div>
+        <div class="kh-features-grid">
+
+          <div class="kh-feature-card">
+            <div class="kh-feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <h3>Offline SQLite Database</h3>
+            <p>Your data lives on your device. Zero internet required. Built on Drift ORM with SQLite, it works in Ilam tea gardens, Jhapa potato farms, and Panchthar cardamom slopes with no cellular signal.</p>
+          </div>
+
+          <div class="kh-feature-card">
+            <div class="kh-feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><line x1="8" y1="10" x2="8" y2="10.01"/><line x1="12" y1="10" x2="12" y2="10.01"/><line x1="16" y1="10" x2="16" y2="10.01"/><line x1="8" y1="14" x2="8" y2="14.01"/><line x1="12" y1="14" x2="12" y2="14.01"/><line x1="8" y1="18" x2="8" y2="18.01"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
+            </div>
+            <h3>Exact Integer Paisa Arithmetic</h3>
+            <p>Every Nepal Rupee split into 100 paisa. Integer-only math eliminates the floating-point errors that cause wage disputes between landowners and workers.</p>
+          </div>
+
+          <div class="kh-feature-card">
+            <div class="kh-feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <h3>Bikram Sambat Calendar</h3>
+            <p>Native Nepali calendar support. Month-based ledger grouping from Baisakh (बैशाख) to Chaitra (चैत्र). Your records match how Nepal counts time.</p>
+          </div>
+
+          <div class="kh-feature-card">
+            <div class="kh-feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Worker Profiles &amp; Rates</h3>
+            <p>Create profiles for each khetala worker with a default daily rate. Override the rate per entry for seasonal or task-based work like tea picking by kilogram.</p>
+          </div>
+
+          <div class="kh-feature-card">
+            <div class="kh-feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            </div>
+            <h3>Audited Voids</h3>
+            <p>Mistakes happen. Voided entries are preserved as an audited record (never silently deleted). Full history, full accountability for dispute-proof bookkeeping.</p>
+          </div>
+
+          <div class="kh-feature-card">
+            <div class="kh-feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h3>PDF Statement Generation</h3>
+            <p>Generate professional A4 PDF statements on-device. Share directly via WhatsApp or email. 25-row chunks for multi-page histories.</p>
+          </div>
+
+          <div class="kh-feature-card">
+            <div class="kh-feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            </div>
+            <h3>Daily Reminders</h3>
+            <p>Two daily reminder prompts at 5 PM and 8 PM to log the day’s field work before it’s forgotten. Scheduled locally with no server required.</p>
+          </div>
+
+          <div class="kh-feature-card">
+            <div class="kh-feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            </div>
+            <h3>Cloud Synchronization</h3>
+            <p>Cloud Firestore synchronizes your household ledger automatically. Access records across devices and protect farm history if your phone is replaced.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── HOW IT WORKS ─── -->
+    <section class="kh-section kh-section--band" id="how-it-works">
+      <div class="container">
+        <div class="kh-section__header">
+          <span class="kh-section__eyebrow">Four steps</span>
+          <h2>How It Works</h2>
+        </div>
+        <div class="kh-steps">
+          <div class="kh-step">
+            <h3>Add Your Workers</h3>
+            <p>Create a profile for each khetala worker with their name and default daily wage rate.</p>
+          </div>
+          <div class="kh-step">
+            <h3>Record Daily Work</h3>
+            <p>Log each day’s work: pick type, kg harvested or hours worked, and date in Bikram Sambat.</p>
+          </div>
+          <div class="kh-step">
+            <h3>Manage Advances</h3>
+            <p>Record cash advances (पेश्की) and deduct them automatically from outstanding wages.</p>
+          </div>
+          <div class="kh-step">
+            <h3>Settle &amp; Share</h3>
+            <p>Generate a PDF statement showing all entries, advances, and net amount owed. Share via WhatsApp or print.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── DOWNLOAD CTA ─── -->
+    <section class="kh-section" id="download">
+      <div class="container">
+        <div class="kh-section__header">
+          <span class="kh-section__eyebrow">Get the app</span>
+          <h2>Download for Android</h2>
+        </div>
+        <div class="kh-download-hero">
+          <div class="kh-download-copy">
+            <div class="kh-download-meta">
+              <span class="kh-meta-pill">v1.0.0</span>
+              <span class="kh-meta-pill">70.2 MB</span>
+              <span class="kh-meta-pill">Android 5.0+</span>
+              <span class="kh-meta-pill">Free</span>
+            </div>
+            <a class="kh-btn kh-btn--primary" href="download.html">Download APK and Install Guide</a>
+          </div>
+          <div class="kh-qr-block">
+            <img src="images/qr-download.svg" alt="Scan QR code to visit the download page" width="140" height="140">
+            <p>Scan to visit the download page</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── FAQ PREVIEW ─── -->
+    <section class="kh-section kh-section--band" id="faq">
+      <div class="container">
+        <div class="kh-section__header">
+          <span class="kh-section__eyebrow">Common questions</span>
+          <h2>Frequently Asked</h2>
+        </div>
+        <div class="kh-accordion">
+          <div class="kh-accordion__item">
+            <button class="kh-accordion__trigger" aria-expanded="false">
+              Does the app require an internet connection?
+              <svg class="kh-accordion__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="kh-accordion__content"><div class="kh-accordion__body">The app works offline in remote fields using local SQLite storage. When connectivity is available, it synchronizes with Cloud Firestore so your records are backed up and accessible on another device.</div></div>
+          </div>
+          <div class="kh-accordion__item">
+            <button class="kh-accordion__trigger" aria-expanded="false">
+              How does cloud sync protect my farm records?
+              <svg class="kh-accordion__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="kh-accordion__content"><div class="kh-accordion__body">Signing in with your account synchronizes your household records to Cloud Firestore. If your phone is lost, damaged, or replaced, signing in on your new phone restores your complete ledger.</div></div>
+          </div>
+          <div class="kh-accordion__item">
+            <button class="kh-accordion__trigger" aria-expanded="false">
+              How much does the app cost?
+              <svg class="kh-accordion__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="kh-accordion__content"><div class="kh-accordion__body">Digital Khetala Hisab-Kitab is completely free. There are no subscription fees, no ads, no in-app purchases, and no premium tiers.</div></div>
+          </div>
+          <div class="kh-accordion__item">
+            <button class="kh-accordion__trigger" aria-expanded="false">
+              Does the app work with the Nepali calendar?
+              <svg class="kh-accordion__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="kh-accordion__content"><div class="kh-accordion__body">Yes. The app natively supports Bikram Sambat (विक्रम सम्बत) dates. Records are grouped by BS month, from Baisakh (बैशाख) to Chaitra (चैत्र).</div></div>
+          </div>
+          <div class="kh-accordion__item">
+            <button class="kh-accordion__trigger" aria-expanded="false">
+              Is my farm data private?
+              <svg class="kh-accordion__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="kh-accordion__content"><div class="kh-accordion__body">Yes. Your records are isolated under your private household account in Cloud Firestore. Strict security rules ensure no outside party can access your records. We never sell or share farm data.</div></div>
+          </div>
+        </div>
+        <p style="margin-top: var(--space-xl);">
+          <a class="kh-btn kh-btn--secondary" href="faq.html">View All Questions</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="kh-footer">
+    <div class="kh-footer__inner container">
+      <div class="kh-footer__brand">
+        <a class="kh-footer__brand-name" href="index.html">Digital Khetala Hisab-Kitab</a>
+        <p class="kh-footer__tagline">Cloud-Backed Agricultural Accounting with Offline Functionality</p>
+        <p class="kh-footer__tagline">Built with pride for Nepali farmers and agricultural workers.</p>
+      </div>
+      <div>
+        <p class="kh-footer__col-title">Product</p>
+        <ul class="kh-footer__links">
+          <li><a href="features.html">Features</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="releases.html">Releases</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="kh-footer__col-title">Support</p>
+        <ul class="kh-footer__links">
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="kh-footer__col-title">Legal</p>
+        <ul class="kh-footer__links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="kh-footer__divider container">
+    <div class="kh-footer__colophon container">
+      <p>Crafted by <a href="https://github.com/saurav-karki1" target="_blank" rel="noopener noreferrer">Saurav Karki</a> · Birtamode, Jhapa, Nepal</p>
+      <p>© 2026 Digital Khetala Hisab-Kitab.</p>
+    </div>
+  </footer>
+
+  <div class="kh-toast" role="status" aria-live="polite"></div>
+  <script src="js/khetala-main.js" defer></script>
+</body>
+</html>

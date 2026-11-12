@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features | Digital Khetala Hisab-Kitab</title>
+  <meta name="description" content="Explore all features of Digital Khetala Hisab-Kitab: local-first SQLite database, exact paisa arithmetic, Bikram Sambat calendar, worker profiles, audited voids, PDF export, daily reminders, and cloud synchronization.">
+  <link rel="canonical" href="https://www.sauravkarki1.com.np/khetala/features.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Devanagari:wght@400;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/khetala-style.css">
+  <link rel="icon" type="image/png" href="images/app_icon.png">
+  <script src="js/khetala-i18n.js"></script>
+</head>
+<body>
+
+  <!-- ─── NAV ─── -->
+  <header>
+    <nav class="kh-nav" aria-label="Main navigation">
+      <div class="kh-nav__inner container">
+        <a class="kh-nav__brand" href="index.html" aria-label="Digital Khetala home">
+          <img class="kh-nav__logo" src="images/app_icon.png" alt="Digital Khetala logo" width="36" height="36">
+          <span class="kh-nav__wordmark"><span class="kh-nav__wordmark-title">Digital Khetala</span><span class="kh-nav__wordmark-sub">Hisab-Kitab</span></span>
+        </a>
+        <div class="kh-nav__links" role="list">
+          <a href="features.html" role="listitem" aria-current="page">Features</a>
+          <a href="download.html" role="listitem">Download</a>
+          <a href="about.html" role="listitem">About</a>
+          <a href="faq.html" role="listitem">FAQ</a>
+          <a href="contact.html" role="listitem">Contact</a>
+        </div>
+        <div class="kh-nav__actions">
+          <a class="kh-lang-switch" href="np/" data-lang-switch="ne" aria-label="Switch to Nepali">नेपाली</a>
+          <a class="kh-btn kh-btn--primary" href="download.html">Download APK</a>
+        </div>
+        <button class="kh-nav__hamburger" data-hamburger aria-label="Open navigation menu" aria-expanded="false" aria-controls="kh-nav-drawer"><span></span><span></span><span></span></button>
+      </div>
+      <nav id="kh-nav-drawer" class="kh-nav__drawer" aria-hidden="true" aria-label="Mobile navigation">
+        <a href="index.html">Home</a><a href="features.html" aria-current="page">Features</a><a href="download.html">Download</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="np/" data-lang-switch="ne">नेपाली</a>
+      </nav>
+    </nav>
+  </header>
+
+  <main>
+    <section class="kh-page-hero">
+      <div class="container">
+        <h1>Core Features</h1>
+        <p class="lead">Every capability built around the real daily workflow of Nepali farm owners, tea garden managers, and agricultural labor contractors.</p>
+      </div>
+    </section>
+
+    <section class="kh-section">
+      <div class="container">
+        <div class="kh-section__header">
+          <span class="kh-section__eyebrow">Complete overview</span>
+          <h2>All Features</h2>
+        </div>
+        <div class="kh-features-grid">
+
+          <!-- 1. Offline SQLite -->
+          <div class="kh-feature-card">
+            <div class="kh-feature-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
+            <h3>Offline SQLite Database</h3>
+            <p>Your data lives on your device. Zero internet required. Built on Drift ORM with SQLite, it works in Ilam tea gardens, Jhapa potato farms, and Panchthar cardamom slopes with no cellular signal.</p>
+            <p><span class="kh-chip">SQLite via Drift ORM</span> <span class="kh-chip">Encrypted local storage</span> <span class="kh-chip">Works at altitude</span></p>
+          </div>
+
+          <!-- 2. Integer Paisa -->
+          <div class="kh-feature-card">
+            <div class="kh-feature-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><line x1="8" y1="10" x2="8" y2="10.01"/><line x1="12" y1="10" x2="12" y2="10.01"/><line x1="16" y1="10" x2="16" y2="10.01"/><line x1="8" y1="14" x2="8" y2="14.01"/><line x1="12" y1="14" x2="12" y2="14.01"/><line x1="8" y1="18" x2="8" y2="18.01"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg></div>
+            <h3>Exact Integer Paisa Arithmetic</h3>
+            <p>Every Nepal Rupee split into 100 paisa. Integer-only math eliminates the floating-point errors that cause wage disputes between landowners and workers.</p>
+            <p><span class="kh-chip">1 NPR = 100 paisa</span> <span class="kh-chip">Zero rounding errors</span> <span class="kh-chip">Audited totals</span></p>
+          </div>
+
+          <!-- 3. Bikram Sambat -->
+          <div class="kh-feature-card">
+            <div class="kh-feature-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+            <h3>Bikram Sambat Calendar</h3>
+            <p>Native Nepali calendar support. Month-based ledger grouping from Baisakh (बैशाख) to Chaitra (चैत्र). Your records match how Nepal counts time.</p>
+            <p><span class="kh-chip">Full BS date support</span> <span class="kh-chip">Monthly settlement periods</span> <span class="kh-chip">Year-end reports</span></p>
+          </div>
+
+          <!-- 4. Worker Profiles -->
+          <div class="kh-feature-card">
+            <div class="kh-feature-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <h3>Worker Profiles &amp; Rate Overrides</h3>
+            <p>Create profiles for each khetala worker with a default daily rate. Override the rate per entry for seasonal or task-based work like tea picking by kilogram.</p>
+            <p><span class="kh-chip">Per-worker default rates</span> <span class="kh-chip">Entry-level rate override</span> <span class="kh-chip">Multi-worker estates</span></p>
+          </div>
+
+          <!-- 5. Audited Voids -->
+          <div class="kh-feature-card">
+            <div class="kh-feature-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+            <h3>Audited Voids</h3>
+            <p>Mistakes happen. Voided entries are preserved as an audited record (never silently deleted). Full history, full accountability for dispute-proof bookkeeping.</p>
+            <p><span class="kh-chip">Void preserved in history</span> <span class="kh-chip">No silent deletes</span> <span class="kh-chip">Dispute-proof ledger</span></p>
+          </div>
+
+          <!-- 6. PDF -->
+          <div class="kh-feature-card">
+            <div class="kh-feature-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+            <h3>PDF Statement Generation</h3>
+            <p>Generate professional A4 PDF statements on-device. Share directly via WhatsApp or email. 25-row chunks for multi-page histories.</p>
+            <p><span class="kh-chip">A4 format</span> <span class="kh-chip">On-device generation</span> <span class="kh-chip">Share via any app</span></p>
+          </div>
+
+          <!-- 7. Reminders -->
+          <div class="kh-feature-card">
+            <div class="kh-feature-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+            <h3>Daily Reminders</h3>
+            <p>Two daily reminder prompts at 5 PM and 8 PM to log the day’s field work before it’s forgotten. Scheduled locally on your device with no server required.</p>
+            <p><span class="kh-chip">5 PM &amp; 8 PM alerts</span> <span class="kh-chip">Local scheduling</span> <span class="kh-chip">No push server</span></p>
+          </div>
+
+          <!-- 8. Cloud Sync -->
+          <div class="kh-feature-card">
+            <div class="kh-feature-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+            <h3>Cloud Synchronization</h3>
+            <p>Cloud-backed agricultural accounting with Google Cloud Firestore. Automatically synchronizes pending records when connected, during data mutations, or upon manual trigger, providing multi-device continuity across your household.</p>
+            <p><span class="kh-chip">Same-account household sync</span> <span class="kh-chip">Multi-device continuity</span> <span class="kh-chip">Strict privacy rules</span></p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="kh-section kh-section--band">
+      <div class="container" style="text-align: center;">
+        <h2>Ready to replace paper?</h2>
+        <p class="lead" style="margin-inline: auto;">Download Digital Khetala Hisab-Kitab for free and start recording your farm’s labor accounts today.</p>
+        <div style="margin-top: var(--space-xl);"><a class="kh-btn kh-btn--primary" href="download.html">Download Free APK (v1.0.0)</a></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="kh-footer">
+    <div class="kh-footer__inner container">
+      <div class="kh-footer__brand"><a class="kh-footer__brand-name" href="index.html">Digital Khetala Hisab-Kitab</a><p class="kh-footer__tagline">Cloud-Backed Agricultural Accounting with Offline Functionality</p></div>
+      <div><p class="kh-footer__col-title">Product</p><ul class="kh-footer__links"><li><a href="features.html">Features</a></li><li><a href="download.html">Download</a></li><li><a href="releases.html">Releases</a></li></ul></div>
+      <div><p class="kh-footer__col-title">Support</p><ul class="kh-footer__links"><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li><li><a href="about.html">About</a></li></ul></div>
+      <div><p class="kh-footer__col-title">Legal</p><ul class="kh-footer__links"><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul></div>
+    </div>
+    <hr class="kh-footer__divider container">
+    <div class="kh-footer__colophon container"><p>Crafted by <a href="https://github.com/saurav-karki1" target="_blank" rel="noopener noreferrer">Saurav Karki</a> · Birtamode, Jhapa, Nepal</p><p>© 2026 Digital Khetala Hisab-Kitab.</p></div>
+  </footer>
+  <div class="kh-toast" role="status" aria-live="polite"></div>
+  <script src="js/khetala-main.js" defer></script>
+</body>
+</html>

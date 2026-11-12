@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Digital Khetala Hisab-Kitab</title>
+  <meta name="description" content="Privacy policy for Digital Khetala Hisab-Kitab. Understand our local-first offline architecture, data minimization, cloud synchronization, and permissions.">
+  <link rel="icon" type="image/png" href="images/app_icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Devanagari:wght@400;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/khetala-style.css">
+  <script src="js/khetala-i18n.js"></script>
+</head>
+<body>
+
+<header>
+  <nav class="kh-nav" aria-label="Main navigation">
+    <div class="kh-nav__inner container">
+      <a class="kh-nav__brand" href="index.html" aria-label="Digital Khetala home">
+        <img class="kh-nav__logo" src="images/app_icon.png" alt="Digital Khetala logo" width="36" height="36">
+        <span class="kh-nav__wordmark">
+          <span class="kh-nav__wordmark-title">Digital Khetala</span>
+          <span class="kh-nav__wordmark-sub">Hisab-Kitab</span>
+        </span>
+      </a>
+      <div class="kh-nav__links" role="list">
+        <a href="features.html" role="listitem">Features</a>
+        <a href="download.html" role="listitem">Download</a>
+        <a href="about.html" role="listitem">About</a>
+        <a href="faq.html" role="listitem">FAQ</a>
+        <a href="contact.html" role="listitem">Contact</a>
+      </div>
+      <div class="kh-nav__actions">
+        <a class="kh-lang-switch" href="np/" data-lang-switch="ne" aria-label="Switch to Nepali">नेपाली</a>
+        <a class="kh-btn kh-btn--primary" href="download.html">Download APK</a>
+      </div>
+      <button class="kh-nav__hamburger" data-hamburger aria-label="Open navigation menu" aria-expanded="false" aria-controls="kh-nav-drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav id="kh-nav-drawer" class="kh-nav__drawer" aria-hidden="true" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="download.html">Download</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a href="np/" data-lang-switch="ne">नेपाली</a>
+    </nav>
+  </nav>
+</header>
+
+<main>
+
+  <!-- Page Hero -->
+  <section class="kh-page-hero">
+    <div class="container">
+      <h1>Privacy Policy</h1>
+      <p class="lead">Effective Date: November 10, 2026 · Digital Khetala Hisab-Kitab (Version 1.0.0)</p>
+    </div>
+  </section>
+
+  <!-- Policy Body -->
+  <section class="kh-section">
+    <div class="container kh-prose">
+
+      <h2>1. Introduction &amp; Local-First Architecture</h2>
+      <p>
+        Digital Khetala Hisab-Kitab ("the App") is developed by Saurav Karki, based in Birtamode, Jhapa, Nepal. The application is built on a strict <strong>local-first architecture</strong> designed specifically to operate without an internet connection in rural agricultural areas.
+      </p>
+      <p>
+        We believe that your farm's financial records, worker wages, picking weights, and advance payments are your private property. Our business model does not involve selling user data, running advertisements, or profiling users.
+      </p>
+
+      <h2>2. Data We Process &amp; Where It Resides</h2>
+      <p>
+        The application processes information that you choose to input:
+      </p>
+      <ul>
+        <li><strong>Worker Information:</strong> Worker names, phone numbers (optional), and default daily or piece-rate wage rates.</li>
+        <li><strong>Labor Entries:</strong> Dates (in Bikram Sambat or Gregorian), task descriptions, units harvested (e.g. kilograms of tea leaves), hours worked, and monetary values calculated in exact integer paisa.</li>
+        <li><strong>Cash Advances (Peshki):</strong> Amounts given as advances and settlement deduction logs.</li>
+        <li><strong>Audit Records:</strong> Reason descriptions when an entry is voided.</li>
+      </ul>
+      <p>
+        <strong>By default, 100% of this data is stored exclusively on your device's internal storage in an SQLite database managed via Drift ORM.</strong> It does not leave your hardware unless you explicitly activate optional features described below.
+      </p>
+
+      <h2>3. Device Permissions &amp; Why They Are Needed</h2>
+      <p>
+        The App requests only standard Android operating system permissions necessary for core utility:
+      </p>
+      <ul>
+        <li><code>POST_NOTIFICATIONS</code>: Required on Android 13+ to deliver optional daily reminder alerts at 5:00 PM and 8:00 PM to remind you to log daily labor. These alarms are triggered on-device using Android's local AlarmManager; no remote push server is involved.</li>
+        <li><code>RECEIVE_BOOT_COMPLETED</code> &amp; <code>SCHEDULE_EXACT_ALARM</code>: Used solely to reschedule your evening reminder alarms after your phone is rebooted.</li>
+        <li><code>VIBRATE</code>: Provides haptic feedback when reminders fire.</li>
+        <li><code>INTERNET</code>: Used only if you deliberately sign into an account to enable Firebase Cloud Sync. If you never sign in, network calls are never initiated.</li>
+      </ul>
+      <p>
+        <strong>Permissions we NEVER request:</strong> We do not ask for camera access, microphone access, precise or coarse GPS location, SMS, contact lists, or external storage management outside the app-specific documents sandbox.
+      </p>
+
+      <h2>4. Cloud Synchronization &amp; Multi-Device Continuity</h2>
+      <p>
+        When you sign into your account to enable cloud backup or multi-device sync:
+      </p>
+      <ul>
+        <li><strong>Authentication:</strong> We use Google Firebase Authentication (Google Sign-In or Email/Password) to authenticate your identity.</li>
+        <li><strong>Firestore Database:</strong> Your ledger data is encrypted in transit (TLS/HTTPS) and stored in Google Cloud Firestore rules restricting read/write access solely to your authenticated User ID.</li>
+        <li><strong>No Third-Party Sharing:</strong> Your ledger records are never shared with advertisers, data brokers, or other users of the app.</li>
+      </ul>
+
+      <h2>5. Backup and Export Security</h2>
+      <p>
+        The app allows you to export your database as an encrypted/hashed JSON backup file. Exported backups include a computed SHA-256 checksum so you can verify the integrity of your records when restoring to a new phone. You retain complete ownership of where backup files are saved.
+      </p>
+
+      <h2>6. Website Analytics</h2>
+      <p>
+        When visiting this promotional website (<code>sauravkarki1.com.np/khetala/</code>), privacy-respecting Cloudflare Web Analytics may be used to measure page views and load times. It does not use cookies, does not track individual IP addresses, and does not follow visitors across different websites.
+      </p>
+
+      <h2>7. Data Retention &amp; Account Deletion</h2>
+      <p>
+        Because data is stored on your device, deleting the app or selecting "Clear Database" in the app settings permanently erases all local records. If you have enabled cloud sync and wish to have your Firebase account and remote records permanently purged, you can email <a href="mailto:sauravkarki59@gmail.com">sauravkarki59@gmail.com</a> and your account will be deleted within 7 business days.
+      </p>
+
+      <h2>8. Contact Us</h2>
+      <p>
+        If you have any questions or concerns regarding this Privacy Policy:
+      </p>
+      <div class="kh-contact-block" style="margin-top: var(--space-md);">
+        <div class="kh-contact-row">
+          <strong>Developer</strong>
+          <span>Saurav Karki</span>
+        </div>
+        <div class="kh-contact-row">
+          <strong>Location</strong>
+          <span>Birtamode, Jhapa, Koshi Province, Nepal</span>
+        </div>
+        <div class="kh-contact-row">
+          <strong>Email</strong>
+          <span><a href="mailto:sauravkarki59@gmail.com">sauravkarki59@gmail.com</a></span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="kh-footer">
+  <div class="kh-footer__inner container">
+    <div class="kh-footer__brand">
+      <img src="images/app_logo.png" alt="Digital Khetala" width="48" height="48">
+      <p class="kh-footer__tagline">Cloud-Backed Agricultural Accounting with Offline Functionality</p>
+      <p>Built with pride for Nepali farmers and agricultural workers.</p>
+    </div>
+    <nav class="kh-footer__links" aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="download.html">Download</a>
+      <a href="releases.html">Releases</a>
+      <a href="faq.html">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="kh-footer__colophon">
+      <p>Crafted by <a href="https://github.com/saurav-karki1" target="_blank" rel="noopener noreferrer">Saurav Karki</a> · Birtamode, Jhapa, Nepal</p>
+      <p>© 2026 Digital Khetala Hisab-Kitab.</p>
+    </div>
+  </div>
+</footer>
+<div class="kh-toast" role="status" aria-live="polite"></div>
+<script src="js/khetala-main.js" defer></script>
+
+</body>
+</html>
