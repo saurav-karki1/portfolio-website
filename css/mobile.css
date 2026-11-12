@@ -1,0 +1,236 @@
+/* ═══════════════════════════════════════════════════════════════════
+   css/mobile.css — Comprehensive mobile & small-screen fixes
+   Applied on top of all other CSS to handle gaps left by component
+   stylesheets. Breakpoints: 600px, 480px, 390px, 320px.
+═══════════════════════════════════════════════════════════════════ */
+
+/* ── 600px and below ──────────────────────────────────────────── */
+@media (max-width: 600px) {
+
+  /* Hero: stack CTA buttons full-width */
+  .hero__cta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-3);
+  }
+
+  .hero__cta .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.9rem 1.5rem;
+  }
+
+  /* Hero: tighten spacing so content clears nav without huge gap */
+  .hero__inner {
+    padding-top: var(--space-6);
+    padding-bottom: var(--space-10);
+  }
+
+  .hero__desc {
+    font-size: var(--fs-sm);
+    max-width: 100%;
+  }
+
+  /* Hero parallax shapes: hide on mobile (they escape viewport) */
+  .hero__parallax-layer { display: none; }
+
+  /* Section headings: prevent long words overflowing */
+  .section-title,
+  .hero__title,
+  .about__text .section-title,
+  .contact__title {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  /* About: single-column earlier */
+  .about__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  /* Skills: reduce internal card padding */
+  .skill-card {
+    padding: var(--space-6);
+  }
+
+  /* Work: 1-column, card width fits screen */
+  .work__grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  /* Work card: comfortable padding on small screens */
+  .work-card {
+    padding: var(--space-6);
+  }
+
+  /* Work card: don't do lift animation on touch (causes stuck hover) */
+  .work-card:hover {
+    transform: none;
+  }
+
+  /* Contact: full-width email button */
+  .contact__email-btn {
+    width: 100%;
+    justify-content: center;
+    align-self: stretch;
+    box-sizing: border-box;
+  }
+
+  /* Contact: readable form padding */
+  .contact__form-col {
+    padding: var(--space-5) var(--space-4);
+  }
+
+  /* Contact: social buttons wrap cleanly */
+  .contact__socials {
+    justify-content: center;
+    gap: var(--space-2);
+  }
+
+  /* Nav mobile dropdown: prevent overflow on narrow phones */
+  .nav__mobile {
+    right: var(--space-4);
+    left: var(--space-4);
+    width: auto;
+  }
+
+  /* Footer: stack any flex rows */
+  .footer__inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-4);
+  }
+}
+
+/* ── 480px and below ──────────────────────────────────────────── */
+@media (max-width: 480px) {
+
+  /* Reduce global section vertical padding */
+  :root {
+    --section-py: clamp(3.5rem, 8vw, 5rem);
+  }
+
+  /* Hero: photo smaller on very small phones */
+  .hero__photo {
+    width: clamp(160px, 48vw, 220px);
+  }
+
+  /* Hero sub-heading slightly smaller */
+  .hero__sub {
+    font-size: 1rem;
+  }
+
+  /* Section title clamp floor */
+  .section-title {
+    font-size: clamp(1.75rem, 7vw, 2.25rem);
+  }
+
+  /* About stats: 2-column is too tight at 480 — go single */
+  .about__stats {
+    grid-template-columns: 1fr;
+  }
+
+  /* Skill cards: reduce font sizes inside */
+  .skill-card__title { font-size: var(--fs-base); }
+  .skill-card__desc  { font-size: var(--fs-xs); }
+
+  /* Contact glass: tighter padding */
+  .contact__glass {
+    padding: var(--space-6) var(--space-4);
+    border-radius: var(--radius-lg);
+  }
+
+  /* Buttons: slightly smaller text to avoid wrapping */
+  .btn {
+    font-size: var(--fs-xs);
+    padding: 0.75rem 1.25rem;
+  }
+
+  /* Work card title: don't overflow */
+  .work-card__title {
+    font-size: var(--fs-base);
+  }
+
+  /* Work card description: smaller on tiny phones */
+  .work-card__desc {
+    font-size: var(--fs-xs);
+  }
+
+  /* Social buttons: compact */
+  .social-btn {
+    font-size: 0.65rem;
+    padding: 0.4rem 0.75rem;
+  }
+}
+
+/* ── 390px and below (iPhone SE / small Android) ──────────────── */
+@media (max-width: 390px) {
+
+  /* Nav logo: slightly smaller to leave room for hamburger */
+  .nav__logo {
+    font-size: var(--fs-lg);
+  }
+
+  /* Hero: title tighter leading */
+  .hero__title {
+    letter-spacing: -0.02em;
+    line-height: 1.0;
+  }
+
+  /* Container: a little more breathing room on edges */
+  :root {
+    --container-px: 1rem;
+  }
+
+  /* Work card: thumbnail not too tall */
+  .work-card__thumb {
+    aspect-ratio: 16 / 9;
+  }
+
+  /* Contact title */
+  .contact__title {
+    font-size: var(--fs-2xl);
+  }
+
+  /* Stat number: prevent gradient text clipping */
+  .about__stat-number {
+    font-size: 2rem;
+  }
+}
+
+/* ── 320px (smallest common viewport) ────────────────────────── */
+@media (max-width: 320px) {
+
+  /* Hero: photo hidden to give text room at absolute minimum width */
+  .hero__photo-wrapper { display: none; }
+
+  /* Hero title floor */
+  .hero__title { font-size: 2rem; }
+
+  /* Compress section title */
+  .section-title,
+  .about__text .section-title { font-size: 1.75rem; }
+
+  /* Nav dropdown full-width */
+  .nav__mobile {
+    right: var(--space-3);
+    left: var(--space-3);
+  }
+}
+
+/* ── Touch: remove hover-dependent transforms that stick on touch ── */
+@media (hover: none) {
+  .work-card:hover         { transform: none; }
+  .about__stat-card:hover  { transform: none; }
+  .btn:hover               { transform: none; }
+  .contact__email-btn:hover { transform: none; }
+  .social-btn:hover        { transform: none; }
+  .nav__cta:hover          { transform: none; }
+
+  /* Shine overlays: never shown on touch */
+  .work-card__shine,
+  .skill-card__shine { display: none; }
+}
