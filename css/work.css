@@ -44,8 +44,9 @@
 /* ── Grid ─────────────────────────────────────────────────────── */
 .work__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-6);
+  max-width: 860px;   /* keeps 2 cards comfortably wide without stretching */
 }
 
 /* ── Card ─────────────────────────────────────────────────────── */
@@ -58,7 +59,8 @@
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  transform-style: preserve-3d;
+  /* Removed transform-style: preserve-3d — it breaks z-index on ::before,
+     causing the gradient to flood the card body instead of staying behind it. */
   will-change: transform;
   transition:
     border-color var(--t-fast) var(--ease-std),
@@ -66,25 +68,16 @@
     transform var(--t-med) var(--ease-out);
 }
 
-/* Gradient border on hover (pseudo border-image trick) */
-.work-card::before {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  background: linear-gradient(135deg, var(--cyan), var(--violet));
-  z-index: -1;
-  opacity: 0;
-  transition: opacity var(--t-med) var(--ease-std);
-}
-
-.work-card:hover::before { opacity: 1; }
+/* Gradient border on hover — box-shadow ring approach (no z-index quirks) */
+.work-card::before { display: none; }
 
 .work-card:hover {
+  /* 1px inset ring gives a crisp gradient-border illusion without flooding the card */
   box-shadow:
-    0 0 64px rgba(79,216,255,0.1),
-    0 32px 80px rgba(0,0,0,0.45);
-  transform: translateY(-8px);
+    0 0 0 1.5px var(--cyan),
+    0 0 48px rgba(79,216,255,0.12),
+    0 24px 64px rgba(0,0,0,0.45);
+  transform: translateY(-6px);
   border-color: transparent;
 }
 
@@ -125,7 +118,7 @@
   background: var(--border);
 }
 
-/* ── Thumbnail placeholder ────────────────────────────────────── */
+/* ── Thumbnail ────────────────────────────────────────────────── */
 .work-card__thumb {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -140,12 +133,13 @@
   overflow: hidden;
 }
 
-.work-card__thumb::before {
+/* Gradient overlay — only shown when there is NO real image (placeholder state) */
+.work-card__thumb:not(:has(img))::before {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg, var(--cyan-dim) 0%, var(--violet-dim) 100%);
-  opacity: 0.6;
+  opacity: 0.45;
 }
 
 .work-card__thumb-label {
@@ -225,7 +219,7 @@
 
 /* ── Responsive ───────────────────────────────────────────────── */
 @media (max-width: 900px) {
-  .work__grid { grid-template-columns: 1fr 1fr; }
+  .work__grid { grid-template-columns: 1fr 1fr; max-width: 100%; }
 }
 
 @media (max-width: 600px) {
