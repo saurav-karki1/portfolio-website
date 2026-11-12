@@ -22,7 +22,7 @@ function initNav() {
 
   // Close drawer on outside click
   document.addEventListener('click', (e) => {
-    if (!e.target.closest('.kh-nav') && drawer.getAttribute('aria-hidden') === 'false') {
+    if (!e.target.closest('[data-hamburger]') && !e.target.closest('.kh-nav__drawer') && drawer.getAttribute('aria-hidden') === 'false') {
       btn.setAttribute('aria-expanded', 'false');
       drawer.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
@@ -179,6 +179,54 @@ function initLangSwitch() {
 }
 
 /* ═══════════════════════════════════════════════════════
+   8. 3D DEVICE PERSPECTIVE & TOUCH INTERACTIVITY
+════════════════════════════════════════════════════════*/
+function init3DInteractive() {
+  const devices = document.querySelectorAll('.kh-device-wrap');
+  if (!devices.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  devices.forEach(wrap => {
+    const phone = wrap.querySelector('.kh-device-phone');
+    if (!phone) return;
+
+    function handleMove(clientX, clientY) {
+      const rect = wrap.getBoundingClientRect();
+      const x = (clientX - rect.left) / rect.width;
+      const y = (clientY - rect.top) / rect.height;
+      if (x < -0.1 || x > 1.1 || y < -0.1 || y > 1.1) return;
+
+      const tiltX = (0.5 - y) * 12;
+      const tiltY = (x - 0.5) * 14;
+      phone.style.transform = `perspective(1000px) rotateY(${tiltY.toFixed(1)}deg) rotateX(${tiltX.toFixed(1)}deg) translateY(-4px) scale(1.02)`;
+    }
+
+    wrap.addEventListener('mousemove', (e) => {
+      handleMove(e.clientX, e.clientY);
+    });
+
+    wrap.addEventListener('mouseleave', () => {
+      phone.style.transform = '';
+    });
+
+    wrap.addEventListener('touchstart', () => {
+      phone.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(-6px) scale(1.02)';
+    }, { passive: true });
+
+    wrap.addEventListener('touchmove', (e) => {
+      if (e.touches.length > 0) {
+        handleMove(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }, { passive: true });
+
+    wrap.addEventListener('touchend', () => {
+      setTimeout(() => {
+        phone.style.transform = '';
+      }, 500);
+    }, { passive: true });
+  });
+}
+
+/* ═══════════════════════════════════════════════════════
    BOOT
 ════════════════════════════════════════════════════════*/
 document.addEventListener('DOMContentLoaded', () => {
@@ -188,4 +236,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initActiveNav();
   initSmoothScroll();
   initLangSwitch();
+  init3DInteractive();
 });
